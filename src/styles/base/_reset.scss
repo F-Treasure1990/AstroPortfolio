@@ -7,6 +7,7 @@
 
 body{
   font-family: "Poppins", "Cabin", sans-serif;
+  background-color: var(--c-primary);
 }
 
 /* Set core root defaults */
@@ -35,4 +36,15 @@ h1 {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  font-family: "Poppins", "Cabin", sans-serif;
 }

@@ -1,0 +1,20 @@
+.toolbelt-menu {
+  display: flex;
+  max-width: 428px;
+  color: var(--c-f-off-white);
+  justify-content: space-around;
+  padding: 16px 0 8px 0;
+  border-bottom: 1px solid var(--c-highlight);
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 48px;
+
+  &__option {
+    font-family: Cabin;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 300;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,23 @@
+---
+import LandingText from "@components/Molecules/LandingText.astro";
+import LandingImg from "@layouts/images/LandingImg.astro";
+---
+
+<section class="landing">
+  <LandingText />
+  <LandingImg />
+</section>
+
+<style>
+  .landing {
+    margin: 80px auto;
+    border: 1px solid var(--c-highlight);
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 16px;
+    padding: 80px 50px 140px 50px;
+    background-color: var(--c-secondary);
+    display: flex;
+    position: relative;
+  }
+</style>

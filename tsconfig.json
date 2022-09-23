@@ -1,3 +1,23 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "paths": {
+      "@components/*": ["src/Components/*"],
+      "@layouts/*": ["src/Layouts/*"],
+      "@styles/*": ["src/styles/*"],
+      "@public/*": ["public/*"]
+    },
+    "allowJs": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": [
+      "astro/client"
+    ],
+    "importsNotUsedAsValues": "error",
+    "jsx": "preserve"
+  }
 }

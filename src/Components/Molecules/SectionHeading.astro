@@ -1,0 +1,173 @@
+---
+export interface Props {
+  index: number;
+  title: string;
+}
+const { index, title } = Astro.props as Props;
+---
+
+<div class="section__header">
+  <div class="section__header-text-wrapper">
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="section__header-pattern"
+    >
+      <g opacity="0.5">
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 0 39.6055)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 0 28.7991)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 0 17.9927)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 0 7.18628)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 10.8057 39.6055)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 10.8057 28.7991)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 10.8057 17.9927)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 10.8057 7.18628)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 21.6113 39.6055)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 21.6113 28.7991)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 21.6113 17.9927)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 21.6113 7.18628)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 32.417 39.6055)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 32.417 28.7991)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 32.417 17.9927)"
+          fill="#2E4468"></rect>
+        <rect
+          width="7.18625"
+          height="7.18625"
+          transform="matrix(1 0 0 -1 32.417 7.18628)"
+          fill="#2E4468"></rect>
+      </g>
+    </svg>
+    <div class="section__header-number">0{index}.</div>
+    <div class="section__header-title">{title}</div>
+  </div>
+  <div class="section__header-paragraph">
+    <slot  />
+    <!-- Line divider -->
+  <div class="section__header-line"/>
+  </div>
+
+</div>
+
+<style lang="scss">
+  .section__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-text-wrapper {
+      position: relative;
+      display: flex;
+      padding-left: 16px;
+      padding-top: 6px;
+      flex-direction: column;
+    }
+
+    &-pattern {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    &-number {
+      color: var(--c-accent);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+      z-index: 5;
+      margin-bottom: -4px;
+    }
+
+    &-title {
+      text-transform: capitalize;
+      color: var(--c-f-white);
+      font-family: Cabin;
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 600;
+      z-index: 5;
+      margin-bottom: 20px;
+    }
+
+    &-paragraph {
+      color: var(--c-f-off-white);
+      line-height: 24px;
+      width: 100%;
+      max-width: 550px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      font-size: 14px;
+    }
+
+    &-line {
+        height: 1px;
+        background-color:var(--c-highlight);
+        width: 30%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+  }
+</style>

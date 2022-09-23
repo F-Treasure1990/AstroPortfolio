@@ -1,0 +1,27 @@
+//Global fonts
+$f-primary: "Poppins";
+$f-secondary: "Cabin";
+
+// Global Colours
+$c-primary: #151f32;
+$c-secondary: #021320;
+$c-highlight: #2E4468;
+$c-accent: #0f70e1;
+$c-f-white: #fbfcfe;
+$c-f-off-white: #adc3d3;
+$c-purple: #bd51b2;
+$c-green: #3c9f76;
+//Dark Variants
+//Gobal Transition
+$global-transition: 0.3s ease;
+
+/* -------------------------------------------------------------------------- */
+/*                                BREAKPOINTS                                 */
+/* -------------------------------------------------------------------------- */
+
+$bp-xsmall: 28.125em; // 450
+$bp-small: 37.5em; //600
+$bp-med: 48em; //768
+$bp-large: 59.375em; // 950
+$bp-xlarge: 90em; //1440
+

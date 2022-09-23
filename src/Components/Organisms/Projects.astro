@@ -1,0 +1,16 @@
+---
+import ProjectCard from "@components/Molecules/ProjectCard.astro";
+const projectCardNumber = [1, 2, 3];
+---
+
+<section class="projects">
+  {projectCardNumber.map((project) => <ProjectCard />)}
+</section>
+
+<style> 
+.projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+</style>

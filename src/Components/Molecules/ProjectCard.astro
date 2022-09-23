@@ -1,0 +1,102 @@
+---
+import Button from "@components/Atoms/Button/Button";
+import ParagraphLayout from "@layouts/ParagraphLayout.astro";
+import Github from "@components/Atoms/Icons/github.astro";
+import Link from "@components/Atoms/Icons/link.astro";
+import Tooltip from "@components/Atoms/Tooltip.astro";
+
+const stack = ["javaScript", "nodeJS", "react", "sass"];
+---
+
+<div class="project__card">
+  <div class="project__card-info">
+    <div>
+      <div class="project__card-title">
+        Simple State Management in JavaScript with Nanny State
+      </div>
+      <div class="project__card-info-btns">
+        <Button label="jan 22, 2022" variant="neutral" />
+        <Button label="personal project" variant="neutral" />
+        <Button variant="purple" />
+      </div>
+    </div>
+    <ParagraphLayout>
+      A web app for visualizing personalized Spotify data. View your top
+      artists, top tracks, recently played tracks, and detailed audio
+      information about each track. Create and save new playlists of recommended
+      tracks based on your existing playlists and more. A web app for
+      visualizing personalized
+    </ParagraphLayout>
+    <div class="project__card-bottom-container">
+      <div class="project__card-link-btns">
+        <Button variant="border" label="github"><Github /></Button>
+        <Button variant="solid" label="link"><Link /></Button>
+      </div>
+      <div class="project__card-softwares">
+        {
+          stack.map((software) => (
+            <Tooltip software={software}>
+              <img src={`${software}.svg`} alt={software} />
+            </Tooltip>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <img class="project__card-img" src="cardImage.png" alt="project image" />
+</div>
+
+<style lang="scss">
+  .project__card {
+    height: max-content;
+    width: 100%;
+    background-color: var(--c-secondary);
+    border-radius: 12px;
+    padding: 16px 12px;
+    display: flex;
+    column-gap: 24px;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    &-title {
+      font-family: Cabin;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 40px;
+      color: var(--c-f-white);
+    }
+
+    &-bottom-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-info-btns {
+      display: flex;
+      column-gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    &-link-btns {
+      display: flex;
+      column-gap: 16px;
+    }
+
+    &-softwares {
+      display: flex;
+      column-gap: 16px;
+    }
+
+    &-img {
+      width: 360px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+</style>

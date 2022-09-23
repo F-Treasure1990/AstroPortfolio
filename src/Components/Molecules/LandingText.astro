@@ -1,0 +1,97 @@
+---
+import AndSymbol from "@components/Atoms/Icons/AndSymbol.astro";
+import Paragraphlayout from "@layouts/ParagraphLayout.astro";
+import Button from "@components/Atoms/Button/Button";
+import Download from "@components/Atoms/Icons/Download.astro";
+import Message from "@components/Atoms/Icons/message.astro";
+---
+
+<section class="landing-text">
+  <!-- Intro Text -->
+  <p class="landing-text__intro-text">Hi, my name is</p>
+  <!-- Name Text -->
+  <div class="landing-text__name">
+    Fenton <span class="landing-text__name-highlight">Treasure</span>
+  </div>
+  <!-- Subheading Text & symbol -->
+  <div class="landing-text__subheading">
+    <AndSymbol />
+    <p class="landing-text__subheading-text">
+      I Develop for the <br />
+      <span>Web</span>
+    </p>
+  </div>
+  <!-- Paragraph -->
+  <div class="landing-text__paragraph">
+    <Paragraphlayout>
+      I’m a self-taught developer specialising in building and designing for
+      exceptional web experiences. Currently focusing on attaining a working
+      environment to aid with further development of my coding and professional
+      skills
+    </Paragraphlayout>
+  </div>
+  <!-- Buttons section -->
+  <div class="landing-text__buttons">
+    <Button label="download CV" variant="solid"><Download /></Button>
+    <Button variant="border" label="message"><Message /></Button>
+  </div>
+</section>
+
+<style lang="scss">
+  .landing-text {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+
+    &__intro-text {
+      font-family: "Cabin";
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 48px;
+      color: var(--c-highlight);
+      margin-bottom: 12px;
+    }
+    &__name {
+      font-size: 80px;
+      line-height: 80px;
+      color: var(--c-f-white);
+      font-weight: 700;
+      margin-bottom: 4px;
+      &-highlight {
+        background: linear-gradient(
+          160deg,
+          var(--c-accent) 28%,
+          var(--c-accent-l-30) 100%
+        );
+        color: transparent;
+        background-clip: text;
+      }
+    }
+
+    &__subheading {
+      font-size: 54px;
+      color: var(--c-f-white);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      &-text {
+        line-height: 58px;
+        margin-left: -20px;
+        margin-top: -4px;
+        & > span {
+          margin-left: 32px;
+        }
+      }
+    }
+
+    &__paragraph {
+      max-width: 508px;
+      margin: 24px 0;
+    }
+
+    &__buttons {
+      display: flex;
+      column-gap: 16px;
+    }
+  }
+</style>

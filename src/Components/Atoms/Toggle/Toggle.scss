@@ -1,0 +1,31 @@
+@use "@styles/abstracts" as *;
+
+.navbar__toggle {
+  &-container {
+    width: 40px;
+    height: 22px;
+    background-color: var(--c-secondary);
+    border-radius: 16px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+    transition: outline 0.2s ease-out;
+    &[data-isOn="true"] {
+      justify-content: flex-end;
+    }
+    &:hover {
+      outline: 1px solid var(--c-accent);
+    }
+  }
+
+  &-toggle {
+    height: 16px;
+    width: 16px;
+    // background-color: var(--c-accent);
+    border-radius: 10px;
+    transition: background-color $global-transition ;
+    @include flex-center;
+  }
+}

@@ -1,0 +1,23 @@
+@use "@styles/abstracts" as *;
+
+$Root: (
+  c-primary: $c-primary,
+  c-secondary: $c-secondary,
+  c-highlight: $c-highlight,
+  c-accent: $c-accent,
+  c-f-white: $c-f-white,
+  c-f-off-white: $c-f-off-white,
+  c-purple: $c-purple,
+  c-green: $c-green,
+  //dark variants
+  c-accent-d-10: darken($c-accent, 10%),
+  //light variants
+  c-accent-l-10: lighten($c-accent, 10%),
+  c-accent-l-30: lighten($c-accent, 30%),
+);
+
+:root {
+  @each $c-name, $c-value in $Root {
+    --#{$c-name}: #{$c-value};
+  }
+}

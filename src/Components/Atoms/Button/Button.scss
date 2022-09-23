@@ -1,0 +1,72 @@
+@use "@styles/abstracts" as *;
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--c-f-white);
+  border: none;
+  border-radius: 4px;
+  width: max-content;
+  text-transform: capitalize;
+  font-weight: 300;
+  background-color: var(--c-highlight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+/* Button Variations  */
+.solid {
+  background-color: var(--c-accent);
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color $global-transition;
+  &:hover {
+    background-color: var(--c-accent-d-10);
+  }
+}
+
+.border {
+  background-color: transparent;
+  border: 1px solid var(--c-highlight);
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--c-accent);
+  transition: border $global-transition;
+  background-color: var(--c-secondary);
+  &:hover {
+    border-color: var(--c-accent);
+  }
+}
+
+.green {
+  border:1px solid var(--c-green);
+  background-color: transparent;
+  color: var(--c-green);
+  font-size: 12px;
+  line-height: 12px;
+  height: 28px;
+  font-weight: 400;
+}
+
+.purple {
+  border:1px solid var(--c-purple);
+  background-color: transparent;
+  color: var(--c-purple);
+  font-size: 12px;
+  line-height: 12px;
+  height: 28px;
+  font-weight: 400;
+}
+
+.neutral {
+  color: var(--c-f-off-white);
+  background-color: var(--c-highlight);
+  font-size: 12px;
+  line-height: 12px;
+  height: 28px;
+  font-weight: 400;
+}

@@ -1,0 +1,35 @@
+@use "@styles/abstracts" as *;
+
+$underline__thickness: 1px;
+$option-gap: 4px;
+
+.navbar__option-container {
+  min-width: max-content;
+  width: max-content;
+  cursor: pointer;
+  overflow: hidden;
+  &:hover .navbar__option {
+    color: var(--c-f-white);
+  }
+}
+
+.navbar__option {
+  text-transform: uppercase;
+  line-height: 12px;
+  font-size: 12px;
+  color: var(--c-f-off-white);
+  letter-spacing: 1.2px;
+  transition: color $global-transition;
+
+  &-underline {
+    margin-top: 6px;
+    height: $underline__thickness;
+    width: 100%;
+    background-color: var(--c-accent);
+  }
+  > span {
+    color: var(--c-accent);
+    margin-right: $option-gap;
+    letter-spacing: 0.6px;
+  }
+}

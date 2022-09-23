@@ -1,0 +1,43 @@
+---
+const { software } = Astro.props;
+---
+
+<div class="tooltip__container">
+  <slot />
+  <div class="tooltip">{software}</div>
+</div>
+
+<style lang="scss">
+  .tooltip {
+    &__container {
+      font-size: 12px;
+      line-height: 12px;
+      height: max-content;
+      font-weight: 400;
+      width: max-content;
+      position: relative;
+      cursor: help;
+
+      &:hover .tooltip {
+        display: flex;
+      }
+    }
+
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    background-color: salmon;
+    color: var(--c-f-off-white);
+    background-color: var(--c-highlight);
+    transform: translate(-50%, -50%);
+    bottom: -140%;
+    left: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: default;
+    text-transform: capitalize;
+  }
+</style>

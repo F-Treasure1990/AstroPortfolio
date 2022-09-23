@@ -1,0 +1,14 @@
+.progessbar {
+  border-radius: 10px;
+  padding: 4px;
+  height: 8px;
+  width: 100%;
+  display: flex;
+  align-items:center;
+  background-color: var(--c-primary);
+  &__inner {
+    height: 2px;
+    background-color: var(--c-accent);
+    border-radius: 2px;
+  }
+}

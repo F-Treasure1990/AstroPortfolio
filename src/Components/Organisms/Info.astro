@@ -1,0 +1,11 @@
+---
+import AboutMeIntro from "@components/Molecules/AboutMeIntro.astro";
+import ToolbeltMenu from "@components/Molecules/ToolbeltMenu/ToolbeltMenu";
+import ToolbeltCardsLayout from "@layouts/ToolbeltCardsLayout.astro";
+---
+
+<section class="info">
+  <AboutMeIntro />
+  <ToolbeltMenu client:load />
+  <ToolbeltCardsLayout />
+</section>

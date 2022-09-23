@@ -1,7 +1,31 @@
 ---
-import Head from "../Layouts/Head.astro";
+import SiteContainerLayout from "@layouts/SiteContainerLayout.astro";
+import PageSectionLayout from "@layouts/PageSectionLayout.astro";
+import Landing from "@components/Organisms/Landing.astro";
+import Info from "@components/Organisms/Info.astro";
+import Quote from "@components/Organisms/Quote.astro";
+import SectionHeading from "@components/Molecules/SectionHeading.astro";
+import Projects from "@components/Organisms/Projects.astro";
+import SubProjects from "@components/Organisms/SubProjects.astro";
+//Icons
 ---
 
-<Head>
-  <div>Homepage</div>
-</Head>
+<SiteContainerLayout>
+  <Landing />
+  <Quote />
+  <PageSectionLayout bgdark>
+    <SectionHeading index={1} title="info" />
+    <Info />
+  </PageSectionLayout>
+
+  <PageSectionLayout>
+    <SectionHeading index={2} title="Projects">
+      I have build my projects using the tools below. Doing so, I have gained a
+      degree of confidence within each.I have build my projects using the tools
+      below. Doing so, I have gained a degree of confidence within each.
+    </SectionHeading>
+    <Projects />
+    <SubProjects />
+  </PageSectionLayout>
+
+</SiteContainerLayout>

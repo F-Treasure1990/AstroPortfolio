@@ -1,0 +1,24 @@
+.quote-text {
+  &__container {
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__author {
+    font-size: 14px;
+    color: var(--c-f-off-white);
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+
+  &__quote {
+    font-family: Cabin;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--c-f-white);
+    line-height: 32px;
+    text-align: center;
+  }
+}

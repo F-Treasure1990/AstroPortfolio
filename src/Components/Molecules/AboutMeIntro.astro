@@ -1,0 +1,47 @@
+---
+import AboutMeDP from "@layouts/images/AboutMeDP.astro";
+---
+
+<section class="about-me">
+  <div class="about-me__pic">
+    <AboutMeDP />
+  </div>
+  <p class="about-me__paragraph">
+    Hi, My name is Fenton and what started as a hobby has quickly become an
+    obsession. It all started with a Traversy Media tutorial on YouTube,
+    learning the basics of HTML and CSS, this soon turned into many tutorials,
+    where I found myself fixated on how the web works along with the roles
+    certain languages have within it. Fast-forward to today, and Javascript has
+    been my language of choice, with strong interest in both front-end and
+    back-end methodologies, I enjoy building personal and professional projects
+    (as seen below).Recently I have been exploring some creative technologies
+    for the design side of the web, allowing me to connect more with my creative
+    side and improve aesthetics of my projects.
+  </p>
+</section>
+
+<style lang="scss">
+  .about-me {
+    border: 1px solid var(--c-highlight);
+    overflow: hidden;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    padding: 9px 0px;
+    margin-bottom: 60px;
+
+    &__pic {
+        margin-left: -50px;
+        display: flex;
+      }
+
+    &__paragraph {
+        line-height: 24px;
+        font-size: 14px;
+        color: var(--c-f-white);
+        font-weight: 300;
+        margin: 0px 24px;
+      }
+  }
+</style>

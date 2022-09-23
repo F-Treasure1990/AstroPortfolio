@@ -1,0 +1,19 @@
+---
+import QuoteBlock from "@layouts/images/QuoteBlock.astro";
+import QuoteFetch from "@components/Atoms/QuoteFetch/QuoteFetch";
+---
+
+<section class="quote">
+  <QuoteFetch client:load />
+  <QuoteBlock />
+</section>
+
+<style> 
+.quote {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    row-gap:24px;
+  }
+</style>
