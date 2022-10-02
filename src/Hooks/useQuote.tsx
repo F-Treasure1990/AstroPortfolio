@@ -11,6 +11,7 @@ const fetchQuotes = async () => {
   }
 };
 
+
 const useQuote = () => {
   return useQuery("quotes", fetchQuotes, {
     refetchOnWindowFocus: false,

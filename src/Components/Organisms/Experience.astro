@@ -1,0 +1,81 @@
+---
+import ExperienceOption from "@components/Molecules/ExperienceOption.astro";
+import ScholarHat from "@components/Atoms/Icons/ScholarHat.astro";
+import ParagraphLayout from "@layouts/ParagraphLayout.astro";
+---
+
+<section class="experience">
+  <div class="experience__options-wrap">
+    <ExperienceOption
+      date={[2022, "present"]}
+      title="student robotics volunteer"
+    >
+      <ParagraphLayout slot="experience-description">
+        A web app for visualizing personalized Spotify data. View your top
+        artists, top tracks, recently played tracks
+      </ParagraphLayout>
+    </ExperienceOption>
+
+    <ExperienceOption date={[2016, "present"]} title="Web Freelancer">
+      <ParagraphLayout slot="experience-description">
+        A web app for visualizing personalized Spotify data. View your top
+        artists, top tracks, recently played tracks
+      </ParagraphLayout>
+    </ExperienceOption>
+
+    <ExperienceOption date={[2019, "present"]} title="Front-End web developer">
+      <ParagraphLayout slot="experience-description">
+        A web app for visualizing personalized Spotify data. View your top
+        artists, top tracks, recently played tracks
+      </ParagraphLayout>
+    </ExperienceOption>
+
+    <ExperienceOption date={[2017, 2018]} title="web content writer">
+      <ParagraphLayout slot="experience-description">
+        A web app for visualizing personalized Spotify data. View your top
+        artists, top tracks, recently played tracks
+      </ParagraphLayout>
+    </ExperienceOption>
+  </div>
+
+  <div class="experience__options-wrap">
+    <ExperienceOption
+      date={[2017, 2020, "- university of worcester"]}
+      title="Bsc Hons. Human Nutrition"
+    >
+      <ScholarHat slot="experience-icon" />
+      <ParagraphLayout slot="experience-description">
+        A web app for visualizing personalized Spotify data. View your top
+        artists, top tracks, recently played tracks
+      </ParagraphLayout>
+    </ExperienceOption>
+
+    <ExperienceOption
+      date={[2016, 2017, "- bournville college"]}
+      title="Access To H.E Health Studies"
+    >
+      <ScholarHat slot="experience-icon" />
+      <ParagraphLayout slot="experience-description">
+        A web app for visualizing personalized Spotify data. View your top
+        artists, top tracks, recently played tracks
+      </ParagraphLayout>
+    </ExperienceOption>
+  </div>
+</section>
+
+<style lang="scss">
+  .experience {
+    display: flex;
+    column-gap: 32px;
+    width: 100%;
+
+    &__options-wrap {
+      flex: 1 1 100%;
+      border: 1px solid var(--c-highlight);
+      border-radius: 8px;
+      padding: 16px 12px;
+      height: max-content;
+    }
+  }
+
+</style>

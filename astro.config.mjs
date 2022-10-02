@@ -12,7 +12,7 @@ export default defineConfig({
       "@components": path.resolve('./src/Components'),
       "@layouts": path.resolve('./src/Layouts'),
       "@public": path.resolve('./public'),
-      "@hooks": path.resolve('./hooks'),
+      "@hooks": path.resolve('./src/Hooks'),
       }
     }
   }

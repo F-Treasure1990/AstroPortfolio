@@ -1,0 +1,36 @@
+.tester {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  overflow: hidden;
+  &__card {
+    height: 216px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    // background-color: salmon;
+  }
+  &__btn {
+    padding: 4px 12px;
+    color: var(--c-f-white);
+    background-color: var(--c-accent);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--c-secondary);
+    margin-top: 40px;
+  }
+  &__toggle-arrow {
+    padding: 4px 32px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-secondary);
+    margin: 24px auto 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

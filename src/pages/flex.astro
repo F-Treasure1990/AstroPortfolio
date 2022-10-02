@@ -1,0 +1,74 @@
+---
+import PageSectionLayout from "@layouts/PageSectionLayout.astro";
+import SiteContainerLayout from "@layouts/SiteContainerLayout.astro";
+---
+
+<SiteContainerLayout>
+  <PageSectionLayout>
+    <section class="flex">
+      <div class="flex__column">
+        <div class="flex__child flex__child-sm"></div>
+        <div class="flex__child flex__child-sm"></div>
+        <div class="flex__child flex__child-lg"></div>
+        <div class="flex__child flex__child-med"></div>
+        <div class="flex__child flex__child-med"></div>
+      </div>
+<div class="flex__column">
+        <div class="flex__child flex__child-med"></div>
+        <div class="flex__child flex__child-sm"></div>
+        <div class="flex__child flex__child-sm"></div>
+        <div class="flex__child flex__child-med"></div>
+        <div class="flex__child flex__child-lg"></div>
+      </div>
+    </section>
+  </PageSectionLayout>
+</SiteContainerLayout>
+
+<style lang="scss">
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    gap: 16px;
+
+    &__column {
+      flex: 1 1;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    &__child {
+      height: 210px;
+      border-radius: 8px;
+      &-sm {
+        flex: 1 1;
+        min-width: 200px;
+        background-color: aqua;
+      }
+      &-med {
+        flex: 2 1;
+        background-color: salmon;
+        background-color: lavender;
+        min-width: 360px;
+      }
+      &-lg {
+        flex: 2 1;
+        height: 436px;
+        min-width: 360px;
+        background-color: firebrick;
+      }
+    }
+  }
+
+  .wide {
+    grid-column: span 2;
+  }
+  .tall {
+    grid-row: span 2;
+  }
+  .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+</style>

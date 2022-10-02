@@ -1,0 +1,76 @@
+---
+import BreifCase from "@components/Atoms/Icons/BreifCase.astro";
+import ParagraphLayout from "@layouts/ParagraphLayout.astro";
+
+export interface Props {
+  date: (string | number)[];
+  title: string;
+}
+
+const { date = [2022, "present"], title = "Exp Title" } = Astro.props as Props;
+---
+
+<div class="experience-option">
+  <div class="experience-option__icon">
+    <slot name="experience-icon">
+      <BreifCase />
+    </slot>
+    <div class="experience-option__icon-line"></div>
+  </div>
+  <div class="experience-option__text-wrap">
+    <div class="experience-option__date">{date[0]} - {date[1]} {date[2]}</div>
+    <div class="experience-option__title">{title}</div>
+    <div class="experience-option__details">
+      <ParagraphLayout>
+        <slot name="experience-description" />
+      </ParagraphLayout>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .experience-option {
+    display: flex;
+    column-gap: 12px;
+
+    &__icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      &-line {
+        height: 100%;
+        background-color: var(--c-highlight);
+        width: 1px;
+      }
+    }
+
+    &__text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__date {
+      color: var(--c-accent);
+      font-size: 12px;
+      line-height: 12px;
+      text-transform: capitalize;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      font-family: Cabin;
+      color: var(--c-f-white);
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 22px;
+      margin-bottom: 8px;
+      text-transform: capitalize;
+    }
+
+    &__details {
+      margin-bottom: 8px;
+    }
+  }
+</style>

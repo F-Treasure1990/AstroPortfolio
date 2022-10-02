@@ -1,0 +1,88 @@
+---
+import Button from "@components/Atoms/Button/Button";
+import ResourcesCost from "@components/Atoms/ResourcesCost.astro";
+export type Props = {
+  size: "md" | "sm" | "lg";
+  title: string;
+  cost:"paid" | "free"
+};
+const { size, title, cost} = Astro.props as Props;
+---
+
+<div class={`resource-card resource-card--${size}`}>
+  <div class="resource-card__content">
+    <div class="resource-card__title-wrapper">
+      <h1 class="resource-card__title">{title}</h1>
+      <ResourcesCost cost={cost} />
+    </div>
+    <div class="resource-card__paragraph">
+      <slot name="resource-card__paragraph" />
+    </div>
+  </div>
+  <Button label="visit" variant="solid" />
+  <div class="resource-card__logo">
+    <slot name="resource-card__logo" />
+  </div>
+</div>
+
+<style lang="scss">
+  .resource-card {
+    background-color: var(--c-secondary);
+    grid-column-start: auto;
+    grid-row-start: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    color: var(--c-f-off-white);
+
+    &__paragraph {
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+      color: var(--c-f-white);
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+    }
+    &__logo {
+      position: absolute;
+      bottom: -32px;
+      right: -8px;
+      opacity: 30%;
+    }
+
+    &--sm {
+      flex-basis: 100%;
+      & .resource-card__title {
+        font-size: 20px;
+      }
+
+      & .resource-card__logo {
+        bottom: -36px;
+        right: -24px;
+        position: absolute;
+      }
+    }
+
+    &--md {
+      grid-column-end: span 2;
+    }
+
+    &--lg {
+      grid-row-end: span 2;
+      grid-column-end: span 2;
+    }
+  }
+</style>

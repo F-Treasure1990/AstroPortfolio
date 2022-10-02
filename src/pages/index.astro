@@ -6,7 +6,8 @@ import Info from "@components/Organisms/Info.astro";
 import Quote from "@components/Organisms/Quote.astro";
 import SectionHeading from "@components/Molecules/SectionHeading.astro";
 import Projects from "@components/Organisms/Projects.astro";
-import SubProjects from "@components/Organisms/SubProjects.astro";
+import SubProjects from "@components/Organisms/SubProjects/SubProjects";
+import Experience from "@components/Organisms/Experience.astro";
 //Icons
 ---
 
@@ -25,7 +26,21 @@ import SubProjects from "@components/Organisms/SubProjects.astro";
       below. Doing so, I have gained a degree of confidence within each.
     </SectionHeading>
     <Projects />
-    <SubProjects />
+    <SubProjects client:visible />
   </PageSectionLayout>
 
+  <PageSectionLayout bgdark>
+    <SectionHeading index={3} title="experience">
+      Infomation regarding my work or educational history, please do not
+      hesitate to contact me.
+    </SectionHeading>
+    <Experience />
+  </PageSectionLayout>
+
+  <PageSectionLayout >
+    <SectionHeading index={4} title="resources">
+      I have build my projects using the tools below. Doing so, I have gained a
+      degree of confidence within each.I have build my projects using.
+    </SectionHeading>
+  </PageSectionLayout>
 </SiteContainerLayout>
