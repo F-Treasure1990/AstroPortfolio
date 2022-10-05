@@ -4,9 +4,9 @@ import ResourcesCost from "@components/Atoms/ResourcesCost.astro";
 export type Props = {
   size: "md" | "sm" | "lg";
   title: string;
-  cost:"paid" | "free"
+  cost: "paid" | "free";
 };
-const { size, title, cost} = Astro.props as Props;
+const { size, title, cost } = Astro.props as Props;
 ---
 
 <div class={`resource-card resource-card--${size}`}>
@@ -28,8 +28,6 @@ const { size, title, cost} = Astro.props as Props;
 <style lang="scss">
   .resource-card {
     background-color: var(--c-secondary);
-    grid-column-start: auto;
-    grid-row-start: auto;
     border-radius: 8px;
     overflow: hidden;
     padding: 16px 12px;
@@ -44,12 +42,16 @@ const { size, title, cost} = Astro.props as Props;
 
     &__paragraph {
       margin-bottom: 12px;
+      @media screen and (max-width: 879px) {
+        margin-bottom: 24px;
+      }
     }
-
     &__title {
       font-size: 24px;
       line-height: 28px;
+      font-weight: 500;
       color: var(--c-f-white);
+      margin-right: 8px;
       &-wrapper {
         display: flex;
         justify-content: space-between;
@@ -64,11 +66,10 @@ const { size, title, cost} = Astro.props as Props;
     }
 
     &--sm {
-      flex-basis: 100%;
       & .resource-card__title {
         font-size: 20px;
-      }
 
+      }
       & .resource-card__logo {
         bottom: -36px;
         right: -24px;

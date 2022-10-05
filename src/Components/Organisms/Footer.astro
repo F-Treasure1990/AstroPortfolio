@@ -1,0 +1,52 @@
+---
+import FooterIcon from "@components/Atoms/Icons/FooterIcon.astro";
+import Linkd20 from "@components/Atoms/Icons/Linkd20.astro";
+import Github20 from "@components/Atoms/Icons/Github20.astro";
+import Insta20 from "@components/Atoms/Icons/Insta20.astro";
+---
+
+    <div class="footer">
+      <div class="footer__icon">
+        <FooterIcon />
+      </div>
+      <div class="footer__info">
+        <p>© 2022-present Fenton Treasure. All Rights Reserved.</p>
+        <div class="footer__media">
+          <a href="#"><Insta20 /></a>
+          <a href="#">
+            <Github20 />
+          </a>
+          <a href="#">
+            <Linkd20 />
+          </a>
+        </div>
+      </div>
+    </div>
+
+<style lang="scss">
+  .footer {
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    &__icon {
+      margin: 0 auto;
+      width: max-content;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--c-f-off-white);
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: 200;
+      margin-top: 80px;
+    }
+    &__media {
+      display: inherit;
+      height: 16px;
+      gap: 32px;
+    }
+  }
+</style>

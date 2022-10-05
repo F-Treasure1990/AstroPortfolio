@@ -1,5 +1,6 @@
 ---
 import Navbar from "@components/Organisms/Navbar.astro";
+import Footer from "@components/Organisms/Footer.astro";
 import "@styles/global.scss";
 export interface HeaderProps {
   title: string;
@@ -23,6 +24,10 @@ const { title = "Fenton Treasure | Portfolio" } = Astro.props as HeaderProps;
   </head>
   <body>
     <Navbar />
-    <slot />
+    <section class="portfolio">
+      <slot />
+    </section>
+    <!-- <Footer /> -->
+
   </body>
 </html>

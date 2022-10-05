@@ -2,7 +2,13 @@
 import ExperienceOption from "@components/Molecules/ExperienceOption.astro";
 import ScholarHat from "@components/Atoms/Icons/ScholarHat.astro";
 import ParagraphLayout from "@layouts/ParagraphLayout.astro";
+import SectionHeading from "@components/Molecules/SectionHeading.astro";
 ---
+
+<SectionHeading index={3} title="experience">
+  Infomation regarding my work or educational history, please do not hesitate to
+  contact me.
+</SectionHeading>
 
 <section class="experience">
   <div class="experience__options-wrap">
@@ -77,5 +83,4 @@ import ParagraphLayout from "@layouts/ParagraphLayout.astro";
       height: max-content;
     }
   }
-
 </style>

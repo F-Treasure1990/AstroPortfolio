@@ -19,7 +19,7 @@ const SubProjects = () => {
         <SubProjectsCards />
         <SubProjectsCardsAnimated toggled={toggled} />
       </div>
-      <div className="sub-projects__divider" style={{marginTop: !toggled && "8px"}}></div>
+      <div className="sub-projects__divider" style={{ marginTop: !toggled && "8px" }}></div>
       <div className="sub-projects__toggle-arrow" onClick={() => setToggled(!toggled)} >
         <svg
           width="28"
@@ -27,6 +27,9 @@ const SubProjects = () => {
           viewBox="0 0 28 29"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          style={{
+            rotate: toggled && "180deg", transition: "all ease 0.3s"
+          }}
         >
           <path
             d="M8.49404 11.5063C8.15234 11.1646 7.59832 11.1646 7.25661 11.5063C6.9149 11.848

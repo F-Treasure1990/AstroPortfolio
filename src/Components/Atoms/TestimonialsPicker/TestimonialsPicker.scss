@@ -1,0 +1,16 @@
+.testimonial-picker {
+  display: flex;
+  column-gap: 12px;
+
+  &__option {
+    width: 16px;
+    height:4px ;
+    background-color: var(--c-accent);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width ease 0.4s;
+    &--selected {
+      width: 32px;
+    }
+  }
+}

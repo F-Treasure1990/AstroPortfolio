@@ -1,14 +1,21 @@
 ---
 import ProjectCard from "@components/Molecules/ProjectCard.astro";
+import SectionHeading from "@components/Molecules/SectionHeading.astro";
 const projectCardNumber = [1, 2, 3];
 ---
+
+<SectionHeading index={2} title="Projects">
+  I have build my projects using the tools below. Doing so, I have gained a
+  degree of confidence within each.I have build my projects using the tools
+  below. Doing so, I have gained a degree of confidence within each.
+</SectionHeading>
 
 <section class="projects">
   {projectCardNumber.map((project) => <ProjectCard />)}
 </section>
 
-<style> 
-.projects {
+<style>
+  .projects {
     display: flex;
     flex-direction: column;
     row-gap: 24px;

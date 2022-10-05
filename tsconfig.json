@@ -6,7 +6,8 @@
       "@components/*": ["src/Components/*"],
       "@layouts/*": ["src/Layouts/*"],
       "@styles/*": ["src/styles/*"],
-      "@public/*": ["public/*"]
+      "@public/*": ["public/*"],
+      "@data/*": ["src/data/*"]
     },
     "allowJs": true,
     "module": "ESNext",

@@ -16,7 +16,7 @@ import Codewars from "@components/Atoms/Icons/Codewars.astro";
 <SiteContainerLayout>
   <PageSectionLayout>
     <div class="grid">
-      <div class="item item--small">
+      <div class="resource__small">
         <ResourcesCard size="sm" cost="free" title="Traversy Media">
           <Youtube slot="resource-card__logo" />
           <p slot="resource-card__paragraph">
@@ -25,7 +25,7 @@ import Codewars from "@components/Atoms/Icons/Codewars.astro";
           </p>
         </ResourcesCard>
 
-        <ResourcesCard size="sm" cost="free" title="Codecademy">
+        <ResourcesCard size="sm" cost="free" title="Code Cademy">
           <CodeCademy slot="resource-card__logo" />
           <p slot="resource-card__paragraph">
             Fantastic introductory crash courses on a multitude of coding
@@ -62,7 +62,7 @@ import Codewars from "@components/Atoms/Icons/Codewars.astro";
         </p>
       </ResourcesCard>
 
-      <div class="item item--small">
+      <div class="resource__small">
         <ResourcesCard size="sm" title="Codewars" cost="free">
           <Codewars slot="resource-card__logo" />
           <p slot="resource-card__paragraph">
@@ -137,61 +137,17 @@ import Codewars from "@components/Atoms/Icons/Codewars.astro";
     grid-gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     /* change this at smaller screen files to aid with height */
-    grid-auto-rows: minmax(210px, auto);
+    grid-auto-rows: 100%;
     grid-auto-flow: dense;
     padding: 0 16px;
   }
+  .resource__small {
+    display: flex;
+    grid-column-end: span 2;
+    gap: 16px;
 
-  .child {
-    background-color: black;
-    flex-basis: 50%;
-  }
-
-  .item {
-    color: #fff;
-    grid-column-start: auto;
-    grid-row-start: auto;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 8px;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    &--sm {
-      grid-column-end: span 1;
-      background: #0c9a9a;
-    }
-
-    &--md {
-      grid-column-end: span 2;
-
-      background: #0c9a9a;
-    }
-
-    &--lg {
-      background: #0c9a9a;
-      grid-row-end: span 2;
-      grid-column-end: span 2;
-    }
-
-    &--small {
-      display: flex;
-      grid-column-end: span 2;
-      gap: 16px;
-
-      @media screen and (max-width: 400px) {
-        flex-wrap: wrap;
-      }
-    }
-
-    &--full {
-      grid-column-end: auto;
-      @media screen and (min-width: 768px) {
-        grid-column: 1/-1;
-        grid-row-end: span 2;
-      }
+    @media screen and (max-width: 400px) {
+      flex-wrap: wrap;
     }
   }
 </style>

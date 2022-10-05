@@ -9,19 +9,19 @@ $breakpoints: (
   medium: $bp-med,
   // 768
   large: $bp-large,
-  // 900
+  // 950
   xlarge: $bp-xlarge // 1440,,,,,,,,,,,,,,,,,,,
 );
 
 // Elements the size of $size and BELOW
 @mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints, $size)) {
+  @media screen and (max-width: map-get($breakpoints, $size)) {
     @content;
   }
 }
 
 @mixin breakpoint-custom-down($size) {
-  @media(max-width:$size) {
+  @media screen and (max-width:$size) {
     @content
   }
 }
@@ -34,7 +34,7 @@ $breakpoints: (
 }
 
 @mixin breakpoint-custom-up($size) {
-  @media(min-width:$size) {
+  @media screen and (min-width:$size) {
     @content
   }
 }

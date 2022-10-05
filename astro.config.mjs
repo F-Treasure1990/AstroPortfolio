@@ -13,6 +13,7 @@ export default defineConfig({
       "@layouts": path.resolve('./src/Layouts'),
       "@public": path.resolve('./public'),
       "@hooks": path.resolve('./src/Hooks'),
+      "@data": path.resolve('./src/Data'),
       }
     }
   }

@@ -2,8 +2,10 @@
 import AboutMeIntro from "@components/Molecules/AboutMeIntro.astro";
 import ToolbeltMenu from "@components/Molecules/ToolbeltMenu/ToolbeltMenu";
 import ToolbeltCardsLayout from "@layouts/ToolbeltCardsLayout.astro";
+import SectionHeading from "@components/Molecules/SectionHeading.astro";
 ---
 
+<SectionHeading index={1} title="info" />
 <section class="info">
   <AboutMeIntro />
   <ToolbeltMenu client:load />

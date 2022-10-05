@@ -1,0 +1,36 @@
+---
+import ResourcesCost from "./ResourcesCost.astro";
+---
+
+<div class="resource-cost-menu">
+  <div class="resource-cost-menu__option">
+    <ResourcesCost cost="free" />
+    free
+  </div>
+  <div class="resource-cost-menu__option">
+    <ResourcesCost cost="paid" />
+    paid
+  </div>
+</div>
+
+<style lang="scss">
+  .resource-cost-menu {
+    padding: 8px 12px;
+    background-color: var(--c-secondary);
+    width: max-content;
+    display: flex;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    margin-top: -16px;
+    gap: 24px;
+    &__option {
+      display: flex;
+      color: var(--c-f-white);
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: capitalize;
+      gap: 12px;
+    }
+  }
+</style>

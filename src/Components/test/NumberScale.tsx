@@ -1,9 +1,9 @@
-import { motion, useMotionValue, animate} from "framer-motion"
-import {useEffect, useRef} from "react"
+import { motion, useMotionValue, animate } from "framer-motion"
+import { useEffect, useRef } from "react"
 
 
-export default function NumberScale({to} :{ to:number}) {
- const nodeRef = useRef();
+export default function NumberScale({ to }: { to: number }) {
+  const nodeRef = useRef();
 
   useEffect(() => {
     const node = nodeRef.current;
@@ -11,6 +11,7 @@ export default function NumberScale({to} :{ to:number}) {
     const controls = animate(0, to, {
       duration: 2,
       onUpdate(value) {
+        /* @ts-ignore */
         node.textContent = value.toFixed();
       }
     });
@@ -19,7 +20,7 @@ export default function NumberScale({to} :{ to:number}) {
   }, [to]);
 
   return (
-  <p ref={nodeRef}></p>
+    <p ref={nodeRef}></p>
   )
 }
 
