@@ -7,7 +7,8 @@
       "@layouts/*": ["src/Layouts/*"],
       "@styles/*": ["src/styles/*"],
       "@public/*": ["public/*"],
-      "@data/*": ["src/data/*"]
+      "@data/*": ["src/data/*"], 
+      "@store/*":["src/Store/*"]
     },
     "allowJs": true,
     "module": "ESNext",

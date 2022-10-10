@@ -1,0 +1,25 @@
+.dots-nav {
+  border: 1px solid var(--c-highlight);
+  height: max-content;
+  position: absolute;
+  right: 12px;
+  bottom: -42px;
+  border-radius: 4px;
+  background-color: var(--c-primary);
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  padding: 8px 16px;
+
+  &__social {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__divider {
+    height: 12px;
+    width: 2px;
+    background-color: var(--c-highlight);
+  }
+}

@@ -1,7 +1,7 @@
 @use "@styles/abstracts" as *;
 
 .burger-menu {
-  width: 36px;
+  width: 64px;
   pointer-events: auto;
   height: 100%;
   display: none;
@@ -11,9 +11,7 @@
   @include breakpoint-down(large) {
     display: flex;
   }
- @include breakpoint-down(medium) {
-    margin-left: 16px;
-  }
+
   //animate to
   &:hover &__line {
     &:nth-child(1) {
@@ -26,16 +24,24 @@
       transform: translate(60%);
     }
   }
+// mainly for the on click
+  &__line-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+@include breakpoint-down(medium) {
+      display: flex;
+    }
+  }
 
   &__lines-wrapper {
     position: relative;
     width: 20px;
-    height: 14px;
+    height: 20px;
     overflow: hidden;
-    display: none;
-    @include breakpoint-down(medium) {
-      display: block;
-    }
+    
   }
   //initial
   &__line {
@@ -53,13 +59,13 @@
     }
 
     &:nth-child(2) {
-      top: 6px;
+      top: 8px;
       right: 0;
       transform: translate(50%);
     }
 
     &:nth-child(3) {
-      top: 12px;
+      top: 16px;
       right: 0;
       transform: translate(25%);
     }
@@ -67,11 +73,11 @@
 
   &__dots-wrapper {
     display: flex;
-    width: 24px;
+    width: 100%;
     height: 100%;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
-    border: 2px;
+    position: relative;
     &:hover .burger-menu__dot {
       &:nth-child(2) {
         margin-bottom: 4px;
@@ -83,14 +89,18 @@
         margin-top: 4px;
       }
     }
- @include breakpoint-down(medium) {
+    @include breakpoint-down(medium) {
       display: none;
     }
+
+    &:hover .dots-nav {
+      display: flex;
+    }
   }
- 
 
   &__dot {
     height: 4px;
+    margin: 0 4px;
     aspect-ratio: 1/1;
     background-color: var(--c-f-white);
     border-radius: 2px;
@@ -100,7 +110,7 @@
 
 .line-active {
   &:nth-child(1) {
-    top: 6px;
+    top: 8px;
     transform: translate(0) rotate(225deg);
   }
 
@@ -109,7 +119,7 @@
   }
 
   &:nth-child(3) {
-    top: 6px;
+    top: 8px;
     transform: translate(0) rotate(135deg);
   }
 }

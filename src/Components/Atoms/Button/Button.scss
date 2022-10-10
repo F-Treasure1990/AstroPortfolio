@@ -1,6 +1,7 @@
 @use "@styles/abstracts" as *;
 
 .btn {
+  max-height: 32px;
   padding: 8px 16px;
   font-size: 14px;
   color: var(--c-f-white);
@@ -17,6 +18,9 @@
   font-weight: 500;
   line-height: 14px;
   z-index: 5;
+@include breakpoint-down(x-small){
+  font-size:12px;
+}
 }
 
 /* Button Variations  */

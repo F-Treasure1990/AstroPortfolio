@@ -1,7 +1,9 @@
 ---
-import Navbar from "@components/Organisms/Navbar.astro";
-import Footer from "@components/Organisms/Footer.astro";
 import "@styles/global.scss";
+import Navbar from "@components/Organisms/Navbar/Navbar";
+import Footer from "@components/Organisms/Footer.astro";
+import NavModal from "@components/Molecules/NavModal/NavModal";
+
 export interface HeaderProps {
   title: string;
 }
@@ -23,11 +25,12 @@ const { title = "Fenton Treasure | Portfolio" } = Astro.props as HeaderProps;
     />
   </head>
   <body>
-    <Navbar />
-    <section class="portfolio">
-      <slot />
-    </section>
-    <!-- <Footer /> -->
-
+      <Navbar client:load/>
+      <section class="portfolio">
+        <slot />
+      </section>
+      <Footer />
   </body>
 </html>
+
+

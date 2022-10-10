@@ -8,34 +8,35 @@ import Projects from "@components/Organisms/Projects.astro";
 import SubProjects from "@components/Organisms/SubProjects/SubProjects";
 import Experience from "@components/Organisms/Experience.astro";
 import Resources from "@components/Organisms/Resources.astro";
-import Footer from "@components/Organisms/Footer.astro";
 import Testimonials from "@components/Organisms/Testimonials.astro";
 //Icons
 ---
 
-<SiteContainerLayout>
-  <!-- <Landing /> -->
-  <!-- <Quote /> -->
-  <!---->
-  <!-- <PageSectionLayout> -->
-  <!--   <Info /> -->
-  <!-- </PageSectionLayout> -->
-  <!---->
-  <!-- <PageSectionLayout> -->
-  <!--   <Projects /> -->
-  <!--   <SubProjects client:visible /> -->
-  <!-- </PageSectionLayout> -->
-  <!---->
-  <!-- <PageSectionLayout bgdark> -->
-  <!--   <Experience /> -->
-  <!-- </PageSectionLayout> -->
-  <!---->
-  <!-- <PageSectionLayout> -->
-  <!--   <Resources /> -->
-  <!-- </PageSectionLayout> -->
-  <!---->
-  <!-- <PageSectionLayout bgdark> -->
-  <!--   <Testimonials /> -->
-  <!-- </PageSectionLayout> -->
+
+<SiteContainerLayout >
+  <Landing />
+  <Quote />
+
+  <PageSectionLayout bgdark>
+    <Info />
+  </PageSectionLayout>
+
+  <PageSectionLayout>
+    <Projects />
+    <SubProjects client:visible />
+  </PageSectionLayout>
+
+  <PageSectionLayout bgdark>
+    <Experience />
+  </PageSectionLayout>
+
+  <PageSectionLayout>
+    <Resources />
+  </PageSectionLayout>
+
+  <PageSectionLayout bgdark>
+    <Testimonials />
+  </PageSectionLayout>
 </SiteContainerLayout>
+
 

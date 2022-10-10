@@ -3,21 +3,49 @@ import LandingText from "@components/Molecules/LandingText.astro";
 import LandingImg from "@layouts/images/LandingImg.astro";
 ---
 
-<section class="landing">
-  <LandingText />
-  <LandingImg />
-</section>
+<div class="landing__margin">
+  <section class="landing">
+    <LandingText />
+    <div class="landing__img">
+      <LandingImg />
+    </div>
+  </section>
+</div>
 
-<style>
+<style lang="scss">
+  @use "@styles/abstracts" as *;
+
   .landing {
     margin: 80px auto;
     border: 1px solid var(--c-highlight);
     width: 100%;
     max-width: 1200px;
     border-radius: 16px;
-    padding: 80px 50px 140px 50px;
+    /* 50px - 16px / 950 - 768*/
+    padding: 80px clamp(1rem, calc(-6.59rem + 20.24vw), 3.13rem) 140px
+      clamp(1rem, calc(-7.97rem + 18.68vw), 3.13rem);
     background-color: var(--c-secondary);
-    display: flex;
     position: relative;
+    overflow: hidden;
+
+    &__margin {
+      margin: 0 8px;
+    }
+    &__img {
+      position: absolute;
+      /* 67px - -190px / 1200 - 768 */
+      bottom: clamp(-11.87rem, calc(-40.43rem + 59.49vw), 4.19rem);
+      /* 34px  -150px / 1200 - 768 */
+      right: clamp(-9.37rem, calc(-35.98rem + 55.42vw), 2.13rem);
+      width: 516px;
+      @include breakpoint-down(medium) {
+        /* -190px - -220px / 768 - 500 */
+        bottom: clamp(-13.75rem, calc(-23.12rem + 30vw), -11.87rem);
+      }
+      @include breakpoint-down(small) {
+        opacity: 0.5;
+      }
+    }
   }
+  /* width="516" height="409" */
 </style>

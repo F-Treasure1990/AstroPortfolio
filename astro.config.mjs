@@ -14,6 +14,7 @@ export default defineConfig({
       "@public": path.resolve('./public'),
       "@hooks": path.resolve('./src/Hooks'),
       "@data": path.resolve('./src/Data'),
+      "@store": path.resolve('./src/Store'),
       }
     }
   }

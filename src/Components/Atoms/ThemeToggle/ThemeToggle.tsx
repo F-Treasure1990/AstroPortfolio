@@ -1,4 +1,4 @@
-import "./Toggle.scss"
+import "./ThemeToggle.scss"
 import { useState } from 'react'
 import { motion } from "framer-motion"
 

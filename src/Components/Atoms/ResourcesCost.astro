@@ -4,9 +4,9 @@ export type Props = {
   }
 const {cost} = Astro.props as Props
 ---
-<div class={`resources__cost-icon resources__cost-icon--${cost}`}> 
 
-</div>
+<div class={`resources__cost-icon resources__cost-icon--${cost}`}> </div>
+
 <style lang="scss"> 
 .resources__cost-icon {
     min-height: 20px;
@@ -22,6 +22,7 @@ const {cost} = Astro.props as Props
         background-color:var(--c-purple);
       }
   }
-
-
 </style>
+
+
+

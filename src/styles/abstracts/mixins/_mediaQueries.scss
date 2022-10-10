@@ -1,15 +1,10 @@
 @use "../_tokens.scss" as *;
 
 $breakpoints: (
-//extra small
-  x-small: $bp-xsmall,
-  // 450
-  small: $bp-small,
-  //600
-  medium: $bp-med,
-  // 768
-  large: $bp-large,
-  // 950
+  x-small: $bp-xsmall,// 450
+  small: $bp-small, //600
+  medium: $bp-med,// 768
+  large: $bp-large,// 950
   xlarge: $bp-xlarge // 1440,,,,,,,,,,,,,,,,,,,
 );
 
