@@ -1,4 +1,4 @@
-const NavbarLogo = () => {
+export default function NavbarLogo(){
   return (
     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M8.7642 31.429C9.14689 21.3394 17.2178 13.2322 27.25 12.8457V19.3922C20.8023 19.7679 15.6437 24.9569 15.2715 31.429H8.7642Z" stroke="url(#paint0_linear_1054_6329)" stroke-width="1.5" />
@@ -18,5 +18,4 @@ const NavbarLogo = () => {
   )
 }
 
-export default NavbarLogo
 

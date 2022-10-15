@@ -2,16 +2,21 @@
 import ProjectCard from "@components/Molecules/ProjectCard.astro";
 import SectionHeading from "@components/Molecules/SectionHeading.astro";
 const projectCardNumber = [1, 2, 3];
+import ProjectsMainData from "@data/ProjectsMainData.json";
 ---
 
-<SectionHeading index={2} title="Projects">
+<SectionHeading index={2} title="projects">
   I have build my projects using the tools below. Doing so, I have gained a
   degree of confidence within each.I have build my projects using the tools
   below. Doing so, I have gained a degree of confidence within each.
 </SectionHeading>
 
 <section class="projects">
-  {projectCardNumber.map((project) => <ProjectCard />)}
+  {
+    ProjectsMainData.map((projectInfo, i) => (
+      <ProjectCard projectCard={projectInfo}  />
+    ))
+  }
 </section>
 
 <style>

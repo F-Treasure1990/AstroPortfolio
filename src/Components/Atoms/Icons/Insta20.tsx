@@ -1,4 +1,4 @@
-const Insta20 = () => {
+export default function Insta20() {
   return (
     <svg
       width="16"
@@ -23,7 +23,4 @@ const Insta20 = () => {
     </svg>
   )
 }
-
-export default Insta20
-
 

@@ -1,8 +1,8 @@
 ---
-const { bgdark }: { bgdark?: boolean } = Astro.props;
+const { bgdark, section }: { bgdark?: boolean; section: string } = Astro.props;
 ---
 
-<section class={`divider80 ${bgdark && "dark-bg"}`}>
+<section class={`${bgdark && "dark-bg"}`} id={section}>
   <section class="section-content">
     <div class="section-content__container">
       <slot />
@@ -13,7 +13,6 @@ const { bgdark }: { bgdark?: boolean } = Astro.props;
 <style lang="scss">
   .dark-bg {
     background-color: var(--c-secondary);
-    padding: 80px 0;
   }
 
   .divider80 {
@@ -21,6 +20,7 @@ const { bgdark }: { bgdark?: boolean } = Astro.props;
   }
 
   .section-content {
+    padding: 80px 0;
     margin: 0 16px;
     &__container {
       max-width: 1000px;

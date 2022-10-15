@@ -1,0 +1,52 @@
+[
+  {
+    "index": 1,
+    "title": "Spotify 2.0 Clone",
+    "date": "Jan 22, 2022",
+    "type": "code",
+    "project": "personal",
+    "image": "spotifyClone",
+    "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more. A web app for visualizing personalized ",
+    "github": "https://github.com/srobo",
+    "link": "",
+    "stack": [
+      "react",
+      "sass",
+      "vite",
+      "node"
+    ]
+  },
+  {
+    "index": 2,
+    "title": "portfolio design v2 on figma",
+    "date": "Jan 22, 2022",
+    "type": "code",
+    "project": "personal",
+    "image": "portfolioDesign",
+    "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more. A web app for visualizing personalized ",
+    "github": "https://github.com/srobo",
+    "link": "",
+    "stack": [
+      "figma",
+      "illustrator",
+      "XD"
+    ]
+  },
+  {
+    "index": 3,
+    "title": "Students Robotics Interface",
+    "date": "Jan 22, 2022",
+    "type": "design",
+    "project": "featured",
+    "image": "studentRobotics",
+    "description": "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more. A web app for visualizing personalized ",
+    "github": "https://github.com/srobo",
+    "link": "https://studentrobotics.org/",
+    "stack": [
+      "react",
+      "sass",
+      "vite",
+      "node"
+    ]
+  }
+]

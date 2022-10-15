@@ -1,5 +1,5 @@
 
-const Linkd20 = () => {
+export default function Linkd20() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_864_8227)">
@@ -15,6 +15,4 @@ const Linkd20 = () => {
 
   )
 }
-
-export default Linkd20
 

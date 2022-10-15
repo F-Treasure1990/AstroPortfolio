@@ -3,50 +3,79 @@ import Button from "@components/Atoms/Button/Button";
 import ParagraphLayout from "@layouts/ParagraphLayout.astro";
 import Github from "@components/Atoms/Icons/github.astro";
 import Link from "@components/Atoms/Icons/link.astro";
+import StackOption from "@components/Atoms/StackOption.astro";
 import Tooltip from "@components/Atoms/Tooltip.astro";
 
-const stack = ["javaScript", "nodeJS", "react", "sass"];
+interface Props {
+  projectCard: {
+    index: number;
+    title: string;
+    date: string;
+    type: string;
+    project: string;
+    image: string;
+    description: string;
+    github: string;
+    link: string;
+    stack: string[];
+  };
+}
+const { projectCard } = Astro.props as Props;
+const { title, date, type, project, image, description, github, link, stack } =
+  projectCard;
 ---
 
 <div class="project__card">
   <div class="project__card-info">
     <div>
       <div class="project__card-title">
-        Simple State Management in JavaScript with Nanny State
+        {title}
       </div>
       <div class="project__card-info-btns">
-        <Button label="jan 22, 2022" variant="neutral" />
-        <Button label="personal project" variant="neutral" />
-        <Button variant="purple" />
+        <Button label={date} variant="neutral" />
+        <Button label={`${project} project`} variant="neutral" />
+        <Button variant={type} />
       </div>
     </div>
-    <ParagraphLayout>
-      A web app for visualizing personalized Spotify data. View your top
-      artists, top tracks, recently played tracks, and detailed audio
-      information about each track. Create and save new playlists of recommended
-      tracks based on your existing playlists and more. A web app for
-      visualizing personalized
-    </ParagraphLayout>
+    <div class="project__card-paragraph">
+      <ParagraphLayout>
+        {description}
+      </ParagraphLayout>
+    </div>
     <div class="project__card-bottom-container">
       <div class="project__card-link-btns">
-        <Button variant="border" label="github"><Github /></Button>
-        <Button variant="solid" label="link"><Link /></Button>
+        <a href={github} target="_blank">
+          <Button variant="border" label="github"><Github /></Button>
+        </a>
+
+        {
+          link && (
+            <a href={link} target="_blank">
+              <Button variant="solid" label="link">
+                <Link />
+              </Button>
+            </a>
+          )
+        }
       </div>
       <div class="project__card-softwares">
         {
           stack.map((software) => (
             <Tooltip software={software}>
-              <img src={`${software}.svg`} alt={software} />
+              <StackOption logo={software} />
             </Tooltip>
           ))
         }
       </div>
     </div>
   </div>
-  <img class="project__card-img" src="cardImage.png" alt="project image" />
+  <div class="project__card-img">
+    <img src={`projectImgs/${image}.png`} alt={`${title}-Project`} />
+  </div>
 </div>
 
 <style lang="scss">
+  @use "@styles/abstracts" as *;
   .project__card {
     height: max-content;
     width: 100%;
@@ -55,6 +84,12 @@ const stack = ["javaScript", "nodeJS", "react", "sass"];
     padding: 16px 12px;
     display: flex;
     column-gap: 24px;
+    @include breakpoint-down(medium) {
+      padding: 28px 20px;
+    }
+    @include breakpoint-down(x-small) {
+      padding: 24px 12px;
+    }
 
     &-info {
       display: flex;
@@ -68,18 +103,49 @@ const stack = ["javaScript", "nodeJS", "react", "sass"];
       font-size: 32px;
       line-height: 40px;
       color: var(--c-f-white);
+      text-transform: capitalize;
+      @include breakpoint-down(large) {
+        text-align: center;
+        line-height: 36px;
+        font-size: 28px;
+      }
+      @include breakpoint-down(large) {
+        line-height: 32px;
+        font-size: clamp(1.38rem, calc(0.95rem + 2.14vw), 1.75rem);
+      }
     }
-
+    &-paragraph {
+      @include breakpoint-down(large) {
+        text-align: center;
+      }
+    }
     &-bottom-container {
       display: flex;
       justify-content: space-between;
+      row-gap: 24px;
+      column-gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      @include breakpoint-down(large) {
+        flex-direction: column-reverse;
+      }
+      @include breakpoint-down(medium) {
+        flex-direction: row;
+      }
+      @include breakpoint-down(small) {
+        flex-direction: column-reverse;
+      }
     }
 
     &-info-btns {
       display: flex;
       column-gap: 16px;
       flex-wrap: wrap;
-      margin-top: 16px;
+      margin-top: 24px;
+      row-gap: 12px;
+      @include breakpoint-down(large) {
+        justify-content: center;
+      }
     }
 
     &-link-btns {
@@ -90,13 +156,22 @@ const stack = ["javaScript", "nodeJS", "react", "sass"];
     &-softwares {
       display: flex;
       column-gap: 16px;
+      z-index: 10;
+      position: relative;
     }
 
     &-img {
-      width: 360px;
+      min-width: 360px;
       height: auto;
       border-radius: 8px;
-      object-fit: cover;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include breakpoint-down(medium) {
+        display: none;
+      }
     }
   }
 </style>

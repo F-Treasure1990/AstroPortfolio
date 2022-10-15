@@ -5,7 +5,7 @@ import NavbarLogo from "@components/Atoms/Icons/NavbarLogo"
 import NavModalOption from "@components/Atoms/NavModalOption/NavModalOption"
 import { navOptions } from "@components/Organisms/Navbar/Navbar"
 
-const NavModal = () => {
+export default function NavModal(){
   const v = {
     i: {
       opacity: 0
@@ -39,4 +39,3 @@ const NavModal = () => {
   )
 }
 
-export default NavModal

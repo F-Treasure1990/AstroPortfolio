@@ -1,6 +1,11 @@
+@use "@styles/abstracts" as *;
+
 .sub-projects-cards{
   display: flex;
   flex-wrap: wrap;
-  gap: 17px;
+  gap: 16px;
   overflow: hidden;
+  @include breakpoint-down(medium) {
+gap: 12px;
+  }
 }

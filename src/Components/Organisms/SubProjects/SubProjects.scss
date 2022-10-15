@@ -1,59 +1,64 @@
-  .sub-projects {
-    margin-top: 80px;
-    &__title {
-      font-size: 28px;
-      color: var(--c-f-white);
-      font-family: Cabin;
-      line-height: 32px;
-      text-align: center;
-      margin-bottom: 40px;
-      text-transform: capitalize;
-    }
-    &__cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 17px;
-    }
-    &__btns {
-      margin-bottom: 16px;
-      height: max-content;
-      display: flex;
-      justify-content: space-between;
-    }
-    &__archived-projects {
-      text-transform: capitalize;
-      padding: 8px 16px;
-      background-color: var(--c-secondary);
-      width: max-content;
-      font-family: Cabin;
-      font-size: 14px;
-      color: var(--c-f-off-white);
-      border-radius: 6px;
-      font-weight: 100;
+.sub-projects {
+  margin-top: 80px;
+  &__title {
+    font-size: 28px;
+    color: var(--c-f-white);
+    font-family: Cabin;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+  }
+  &__btns {
+    margin-bottom: 16px;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__archived-projects {
+    text-transform: capitalize;
+    padding: 8px 16px;
+    background-color: var(--c-secondary);
+    width: max-content;
+    font-family: Cabin;
+    font-size: 14px;
+    color: var(--c-f-off-white);
+    border-radius: 6px;
+    font-weight: 100;
 
-      &-num {
-        color: var(--c-accent);
-        font-weight: 700;
-        margin-right: 2px;
-      }
-    }
-    &__divider {
-      width: 100%;
-      height: 2px;
-      background-color: var(--c-secondary);
-      margin-top: 24px;
-      transition:margin-top 0.2s ease;
-    }
-    &__toggle-arrow {
-      padding: 4px 32px;
-      width: 20%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--c-secondary);
-      margin: 24px auto 0 auto;
-      border-radius: 4px;
-      cursor: pointer;
+    &-num {
+      color: var(--c-accent);
+      font-weight: 700;
+      margin-right: 2px;
     }
   }
+  &__divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--c-secondary);
+    margin-top: 24px;
+    transition: margin-top 0.2s ease;
+  }
+  &__toggle-arrow {
+    padding: 4px 32px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-secondary);
+    margin: 24px auto 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__svg {
+    width: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+}
 

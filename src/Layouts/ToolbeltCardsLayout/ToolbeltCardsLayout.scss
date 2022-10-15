@@ -1,0 +1,11 @@
+  @use "@styles/abstracts" as *;
+
+  .toolbelt__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    @include breakpoint-down(small) {
+        gap: 12px;
+      }
+  }

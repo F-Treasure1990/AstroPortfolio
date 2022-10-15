@@ -20,6 +20,7 @@
   z-index: 5;
 @include breakpoint-down(x-small){
   font-size:12px;
+  padding: 8px 12px;
 }
 }
 
@@ -47,7 +48,7 @@
   }
 }
 
-.green {
+.code {
   border:1px solid var(--c-green);
   background-color: transparent;
   color: var(--c-green);
@@ -57,7 +58,7 @@
   font-weight: 400;
 }
 
-.purple {
+.design {
   border:1px solid var(--c-purple);
   background-color: transparent;
   color: var(--c-purple);

@@ -5,48 +5,57 @@ import Github20 from "@components/Atoms/Icons/Github20";
 import Insta20 from "@components/Atoms/Icons/Insta20";
 ---
 
-    <div class="footer">
-      <div class="footer__icon">
-        <FooterIcon />
-      </div>
-      <div class="footer__info">
-        <p>© 2022-present Fenton Treasure. All Rights Reserved.</p>
-        <div class="footer__media">
-          <a href="#"><Insta20 /></a>
-          <a href="#">
-            <Github20 />
-          </a>
-          <a href="#">
-            <Linkd20 />
-          </a>
-        </div>
-      </div>
+<div class="footer">
+  <div class="footer__icon">
+    <FooterIcon />
+  </div>
+  <div class="footer__info">
+    <p>© 2022-present Fenton Treasure. All Rights Reserved.</p>
+    <div class="footer__media">
+      <a href="#"><Insta20 /></a>
+      <a href="#">
+        <Github20 />
+      </a>
+      <a href="#">
+        <Linkd20 />
+      </a>
     </div>
+  </div>
+</div>
 
 <style lang="scss">
+@use "@styles/abstracts" as *;
   .footer {
-    width: 1000px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 80px auto 0 auto;
     margin-bottom: 12px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
     &__icon {
-      margin: 0 auto;
       width: max-content;
+      max-width: 319px;
+      width: 80%;
     }
 
     &__info {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      width:100%;
       color: var(--c-f-off-white);
       line-height: 20px;
-      font-size: 14px;
+      font-size: 10px;
       font-weight: 200;
-      margin-top: 80px;
+      margin-top: 60px;
+      column-gap:24px;
     }
     &__media {
       display: inherit;
       height: 16px;
       gap: 32px;
+    @include breakpoint-down(small) {
+gap: 24px;
+      }
     }
   }
 </style>

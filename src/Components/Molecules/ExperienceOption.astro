@@ -29,6 +29,7 @@ const { date = [2022, "present"], title = "Exp Title" } = Astro.props as Props;
 </div>
 
 <style lang="scss">
+  @use "@styles/abstracts" as *;
   .experience-option {
     display: flex;
     column-gap: 12px;
@@ -53,7 +54,7 @@ const { date = [2022, "present"], title = "Exp Title" } = Astro.props as Props;
     &__date {
       color: var(--c-accent);
       font-size: 12px;
-      line-height: 12px;
+      line-height: 16px;
       text-transform: capitalize;
       margin-top: 4px;
       margin-bottom: 12px;
@@ -67,6 +68,9 @@ const { date = [2022, "present"], title = "Exp Title" } = Astro.props as Props;
       line-height: 22px;
       margin-bottom: 8px;
       text-transform: capitalize;
+      @include breakpoint-down(medium) {
+          font-size: 20px;
+        }
     }
 
     &__details {

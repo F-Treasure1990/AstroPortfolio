@@ -10,19 +10,23 @@ const underlineAnimation = {
   },
 };
 
-interface Props { 
-  section:string;
-  index:number
- }
+interface Props {
+  section: string;
+  index: number
+}
 
-const NavOption=({section, index}:Props) => {
+export default function NavOption({ section, index }: Props) {
+
+  const scroll = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({inline:"start"});
+  };
+
   return (
-    <motion.div className="navbar__option-container" whileHover="a" initial="i">
+    <motion.div onClick={() => scroll(section)} className="navbar__option-container" whileHover="a" initial="i">
       <div className="navbar__option"><span>0{index + 1}.</span>{section}</div>
       <motion.div className="navbar__option-underline" variants={underlineAnimation} />
     </motion.div>
   )
 }
 
-export default NavOption
 

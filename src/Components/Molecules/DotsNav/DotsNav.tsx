@@ -5,7 +5,7 @@ import Insta20 from "@components/Atoms/Icons/Insta20"
 import Github20 from "@components/Atoms/Icons/Github20"
 import Linkd20 from "@components/Atoms/Icons/Linkd20"
 
-const DotsNav = () => {
+export default function DotsNav() {
   return (
     <nav className="dots-nav" >
       <div className="dots-nav__social">
@@ -22,4 +22,3 @@ const DotsNav = () => {
   )
 }
 
-export default DotsNav

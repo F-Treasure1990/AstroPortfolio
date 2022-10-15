@@ -1,17 +1,17 @@
+@use "@styles/abstracts" as *;
+
 .testimonial {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: max-content;
-  margin: 0 auto;
-  max-width: 60%;
+  width: 100%;
 
   &__img {
     max-width: 90px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: sienna;
-    border: 2px solid var(--c-accent);
+    background-color: var(--c-secondary);
+    outline: 2px solid var(--c-accent);
     margin-bottom: 16px;
   }
   &__name {
@@ -40,6 +40,11 @@
     line-height: 24px;
     font-weight: 300;
     color: var(--c-f-off-white);
+    transition: width 0.3s ease;
+    width: 70%;
+  
+    @include breakpoint-down(small) {
+      width: 90%;
+    }
   }
 }
-

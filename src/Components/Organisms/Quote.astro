@@ -5,15 +5,30 @@ import QuoteFetch from "@components/Atoms/QuoteFetch/QuoteFetch";
 
 <section class="quote">
   <QuoteFetch client:load />
-  <QuoteBlock />
+  <div class="quote__block">
+    <QuoteBlock />
+  </div>
 </section>
 
-<style> 
-.quote {
+<style lang="scss">
+  @use "@styles/abstracts" as *;
+  .quote {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
-    align-items:center;
-    row-gap:24px;
+    align-items: center;
+    row-gap: 24px;
+    padding: 30px 40px 80px 40px;
+    &__block {
+      width: 200px;
+      transition: width ease 0.3s;
+      @include breakpoint-down(small) {
+        width: 180px;
+      }
+
+      @include breakpoint-down(x-small) {
+        width: 160px;
+      }
+    }
   }
 </style>

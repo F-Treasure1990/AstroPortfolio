@@ -1,7 +1,7 @@
 ---
 import AboutMeIntro from "@components/Molecules/AboutMeIntro.astro";
 import ToolbeltMenu from "@components/Molecules/ToolbeltMenu/ToolbeltMenu";
-import ToolbeltCardsLayout from "@layouts/ToolbeltCardsLayout.astro";
+import ToolbeltCardsLayout from "@layouts/ToolbeltCardsLayout/ToolbeltCardsLayout";
 import SectionHeading from "@components/Molecules/SectionHeading.astro";
 ---
 
@@ -9,5 +9,5 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
 <section class="info">
   <AboutMeIntro />
   <ToolbeltMenu client:load />
-  <ToolbeltCardsLayout />
+  <ToolbeltCardsLayout client:load/>
 </section>

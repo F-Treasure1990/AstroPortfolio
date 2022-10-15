@@ -1,5 +1,5 @@
 
-const FolderIcon = () => {
+export default function FolderIcon() {
   return (
     <svg
       width="32"
@@ -58,4 +58,3 @@ const FolderIcon = () => {
   )
 }
 
-export default FolderIcon

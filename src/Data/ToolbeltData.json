@@ -1,0 +1,148 @@
+[
+  [
+    {
+      "name": "react",
+      "link": "https://reactjs.org/",
+      "confidence": 85
+    },
+    {
+      "name": "framerMotion",
+      "link": "https://www.framer.com/docs/",
+      "confidence": 80
+    },
+    {
+      "name": "laravel",
+      "link": "https://laravel.com/",
+      "confidence": 60
+    },
+    {
+      "name": "nestJS",
+      "link": "https://nestjs.com/",
+      "confidence": 75
+    },
+    {
+      "name": "prisma",
+      "link": "https://www.prisma.io/",
+      "confidence": 70
+    },
+    {
+      "name": "tailwind",
+      "link": "https://tailwindcss.com/",
+      "confidence": 85
+    },
+    {
+      "name": "express",
+      "link": "https://expressjs.com/",
+      "confidence": 70
+    },
+    {
+      "name": "nextJS",
+      "link": "https://nextjs.org/",
+      "confidence": 75
+    },
+    {
+      "name": "Apollo",
+      "link": "https://www.apollographql.com/",
+      "confidence": 75
+    }
+  ],
+  [
+    {
+      "name": "HTML",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      "confidence": 90
+    },
+    {
+      "name": "typeScript",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      "confidence": 80
+    },
+    {
+      "name": "CSS",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "confidence": 90
+    },
+    {
+      "name": "PHP",
+      "link": "https://www.php.net/",
+      "confidence": 60
+    },
+    {
+      "name": "javaScript",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "confidence": 90
+    },
+    {
+      "name": "lua",
+      "link": "https://www.lua.org/",
+      "confidence": 70
+    },
+    {
+      "name": "graphQL",
+      "link": "https://graphql.org/",
+      "confidence": 75
+    },
+    {
+      "name": "SQL",
+      "link": "https://www.w3schools.com/sql/sql_intro.asp",
+      "confidence": 60
+    },
+    {
+      "name": "node",
+      "link": "https://nodejs.org/en/",
+      "confidence": 75
+    },
+    {
+      "name": "sass",
+      "link": "https://sass-lang.com/",
+      "confidence": 95
+    }
+  ],
+  [
+    {
+      "name": "neovim",
+      "link": "https://neovim.io/",
+      "confidence": 85
+    },
+    {
+      "name": "postgres",
+      "link": "https://www.postgresql.org/",
+      "confidence": 85
+    },
+    {
+      "name": "Figma",
+      "link": "https://www.figma.com/",
+      "confidence": 85
+    },
+    {
+      "name": "jest",
+      "link": "https://jestjs.io/docs/tutorial-react",
+      "confidence": 85
+    },
+    
+    {
+      "name": "postman",
+      "link": "https://www.postman.com/",
+      "confidence": 70
+    },
+    {
+      "name": "vite",
+      "link": "https://vitejs.dev/",
+      "confidence": 85
+    },
+    {
+      "name": "docker",
+      "link": "https://www.docker.com/",
+      "confidence": 50
+    },
+        {
+      "name": "XD",
+      "link": "https://www.docker.com/",
+      "confidence": 80
+    },    {
+      "name": "illustrator",
+      "link": "https://www.docker.com/",
+      "confidence": 90
+    }
+  ]
+]

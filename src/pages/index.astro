@@ -17,24 +17,24 @@ import Testimonials from "@components/Organisms/Testimonials.astro";
   <Landing />
   <Quote />
 
-  <PageSectionLayout bgdark>
+  <PageSectionLayout bgdark section="info">
     <Info />
   </PageSectionLayout>
 
-  <PageSectionLayout>
+  <PageSectionLayout section="projects">
     <Projects />
     <SubProjects client:visible />
   </PageSectionLayout>
 
-  <PageSectionLayout bgdark>
+  <PageSectionLayout bgdark section="experience">
     <Experience />
   </PageSectionLayout>
 
-  <PageSectionLayout>
+  <PageSectionLayout section="resources">
     <Resources />
   </PageSectionLayout>
 
-  <PageSectionLayout bgdark>
+  <PageSectionLayout bgdark section="testimonials">
     <Testimonials />
   </PageSectionLayout>
 </SiteContainerLayout>

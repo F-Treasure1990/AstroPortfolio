@@ -1,0 +1,61 @@
+@use "@styles/abstracts" as *;
+
+.toolbelt__card {
+  flex: 1 1 200px;
+  max-width: 210px;
+  border: 1px solid var(--c-highlight);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  column-gap: 16px;
+  min-height: 58px;
+  transition: transform ease 0.3s, border ease 0.2s;
+  @include breakpoint-down(small) {
+    flex: 1 1 190px;
+  }
+  @include breakpoint-down(x-small) {
+    flex: 1 1 85%;
+    max-width: 85%;
+  }
+  &:hover {
+    border: 1px solid var(--c-accent);
+    transform: translateY(-4px);
+  }
+  &-info {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-img {
+    width: 28px;
+    height: 28px;
+    @include flex-center;
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    font-family: Cabin;
+    font-size: 16px;
+    color: var(--c-f-white);
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+  }
+
+  &-confidence {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--c-accent);
+  }
+
+  &-percentage-sign {
+    font-size: 10px;
+  }
+}

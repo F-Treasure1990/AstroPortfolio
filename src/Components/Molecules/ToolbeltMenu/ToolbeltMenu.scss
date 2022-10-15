@@ -1,3 +1,5 @@
+@use "@styles/abstracts" as *;
+
 .toolbelt-menu {
   display: flex;
   max-width: 428px;
@@ -8,7 +10,12 @@
   position: relative;
   margin: 0 auto;
   margin-bottom: 48px;
-
+ @include breakpoint-down(small) {
+   width: 80%;
+    }
+ @include breakpoint-down(x-small) {
+   width: 90%;
+    }
   &__option {
     font-family: Cabin;
     font-size: 20px;
@@ -16,5 +23,11 @@
     font-weight: 300;
     padding: 0 8px;
     cursor: pointer;
+    @include breakpoint-down(small) {
+      font-size: 18px;
+    }
+@include breakpoint-down(x-small) {
+      font-size: 16px;
+    }
   }
 }

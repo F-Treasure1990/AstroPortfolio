@@ -70,11 +70,25 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
 </section>
 
 <style lang="scss">
+  @use "@styles/abstracts" as *;
   .experience {
     display: flex;
     column-gap: 32px;
     width: 100%;
-
+    @include breakpoint-down(large){
+      gap: 16px;
+      }
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include breakpoint-down(small) {
+      width: 90%;
+    }
+    @include breakpoint-down(x-small) {
+      width: auto;
+    }
     &__options-wrap {
       flex: 1 1 100%;
       border: 1px solid var(--c-highlight);

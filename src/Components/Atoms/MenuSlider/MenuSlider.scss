@@ -7,8 +7,7 @@ $ballSize: 6px;
   width: max-content;
   row-gap: 41px;
   position: absolute;
-  top: 0;
-
+  bottom: -1px;
   left: 0;
   &__ball {
 
@@ -21,7 +20,7 @@ $ballSize: 6px;
   &__underline {
     background-color: var(--c-accent);
     width: 50px;
-    height: 3px;
+    height: 1px;
     border-radius: 5px;
   }
 }

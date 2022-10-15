@@ -1,9 +1,10 @@
 import "./TestimonialsSlider.scss"
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import TestimonialOption from "@components/Molecules/TestimonialOption/TestimonialOption";
-import testimonialData from "@data/TestimonialsData"
+import testimonialData from "@data/TestimonialsData.json"
 import TestimonialsPicker from "@components/Atoms/TestimonialsPicker/TestimonialsPicker";
 
 const variants = {
@@ -31,7 +32,7 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-const TestimonialSlider = () => {
+export default function TestimonialSlider() {
   const [[page, direction], setPage] = useState([0, 0]);
   const testimonalIndex = wrap(0, testimonialData.length, page);
   const paginate = (newDirection: number) => {
@@ -41,7 +42,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="testimonial-slider">
-      <AnimatePresence initial={false} custom={direction}>
+      <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
           key={page}
           className="testimonial-slider__card"
@@ -82,5 +83,3 @@ const TestimonialSlider = () => {
     </div>
   );
 };
-
-export default TestimonialSlider;

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { motion } from "framer-motion"
 
 export default function Toggle() {
-  const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(true);
   const toggleSwitch = () => setIsOn(!isOn);
 
   const spring = {

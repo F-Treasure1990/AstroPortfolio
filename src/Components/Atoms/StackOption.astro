@@ -1,0 +1,24 @@
+---
+const { logo } = Astro.props;
+---
+
+<div class="stack-option">
+  <img class="stack-option__logo" src={`stackIcons/${logo}.svg`} alt={logo} />
+</div>
+
+<style lang="scss">
+  .stack-option {
+    width: 32px;
+    height: 32px;
+    background-color: var(--c-primary);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    &  img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>

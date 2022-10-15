@@ -1,24 +1,16 @@
+@use "@styles/abstracts" as *;
+
 .testimonial-slider {
-  margin-top: -40px;
-  height: 360px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   &__picker {
-    position: absolute;
-    bottom: 12px;
     display: flex;
     column-gap: 8px;
+    justify-content: center;
   }
   &__card {
-    height: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    margin-bottom: 24px;
   }
 }
 

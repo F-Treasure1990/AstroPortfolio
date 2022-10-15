@@ -4,7 +4,7 @@ import SubProjectsCards from "@components/Molecules/SubProjectsCards/SubProjects
 import SubProjectsCardsAnimated from "@components/Molecules/SubProjectsCards/SubProjectsCardsAnimated"
 import { useState } from "react";
 
-const SubProjects = () => {
+export default function SubProjects() {
   const [toggled, setToggled] = useState(false)
   return (
     <section className="sub-projects">
@@ -22,8 +22,7 @@ const SubProjects = () => {
       <div className="sub-projects__divider" style={{ marginTop: !toggled && "8px" }}></div>
       <div className="sub-projects__toggle-arrow" onClick={() => setToggled(!toggled)} >
         <svg
-          width="28"
-          height="29"
+          className="sub-projects__svg"
           viewBox="0 0 28 29"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -43,4 +42,3 @@ const SubProjects = () => {
   )
 }
 
-export default SubProjects

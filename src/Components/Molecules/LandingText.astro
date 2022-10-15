@@ -33,7 +33,9 @@ import Message from "@components/Atoms/Icons/message.astro";
   <!-- Buttons section -->
   <div class="landing-text__buttons">
     <Button label="download CV" variant="solid"><Download /></Button>
-    <Button variant="border" label="message"><Message /></Button>
+    <a href="mailto:fentoncodes@gmail.com" className="navbar-button">
+      <Button variant="border" label="message"><Message /></Button>
+    </a>
   </div>
 </section>
 
@@ -145,7 +147,7 @@ import Message from "@components/Atoms/Icons/message.astro";
     &__buttons {
       display: flex;
       column-gap: 16px;
-     
+
       @include breakpoint-down(x-small) {
         column-gap: 8px;
         justify-content: center;

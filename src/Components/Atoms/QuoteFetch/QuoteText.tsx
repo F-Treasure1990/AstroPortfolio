@@ -1,15 +1,13 @@
-import type { CSSProperties } from "react"
 import "./QuoteText.scss"
 import useQuote from "src/Hooks/useQuote";
-import { PuffLoader } from "react-spinners"
+import { CubeSpinner } from "react-spinners-kit"
 
 
-
-const QuoteText = () => {
+export default function QuoteText() {
   const { data, isSuccess, refetch, isLoading } = useQuote();
   return (
     <figure className="quote-text__container" onClick={() => refetch()}>
-      {isLoading && <PuffLoader color="var(--c-accent)" size={10}/>}
+      {isLoading && <CubeSpinner frontColor="var(--c-accent)" backColor="var(--c-highlight)" size={20} />}
       {isSuccess && (
         <>
           <figcaption className="quote-text__author">{data?.author}</figcaption>
@@ -22,4 +20,3 @@ const QuoteText = () => {
   )
 }
 
-export default QuoteText

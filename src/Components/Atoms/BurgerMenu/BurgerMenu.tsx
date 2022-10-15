@@ -2,7 +2,7 @@ import "./BurgerMenu.scss";
 import useStore from "@store/useStore"
 import DotsNav from "@components/Molecules/DotsNav/DotsNav";
 
-const BurgerMenu = () => {
+export default function BurgerMenu(){
   const toggleBurgerMenu = useStore(state => state.toggleBurgerMenu)
   const burgerMenuToggled = useStore(state => state.burgerMenuToggled)
   return (
@@ -25,6 +25,4 @@ const BurgerMenu = () => {
     </>
   )
 }
-
-export default BurgerMenu
 

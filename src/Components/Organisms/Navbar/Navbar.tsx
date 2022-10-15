@@ -7,9 +7,9 @@ import NavbarLogo from "@components/Atoms/Icons/NavbarLogo"
 import NavModal from "@components/Molecules/NavModal/NavModal"
 import useStore from "@store/useStore"
 import { AnimatePresence } from "framer-motion"
-export const navOptions = ["about", "projects", "experience", "resources", "reviews"];
+export const navOptions = ["info", "projects", "experience", "resources", "testimonials"];
 
-const NavbarMain2 = () => {
+export default function Navbar(){
   const burgerMenuToggled = useStore(state => state.burgerMenuToggled)
   return (
     <section className="navbar">
@@ -31,9 +31,10 @@ const NavbarMain2 = () => {
 
             <div className="navbar__main-divider"></div>
 
-            <Button variant="border" label="message" />
+            <a href="mailto:fentoncodes@gmail.com">
+              <Button variant="border" label="message" />
+            </a>
           </div>
-
           <BurgerMenu />
         </div>
       </div>
@@ -44,4 +45,3 @@ const NavbarMain2 = () => {
   )
 }
 
-export default NavbarMain2

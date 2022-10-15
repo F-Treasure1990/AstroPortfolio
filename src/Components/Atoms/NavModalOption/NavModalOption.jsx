@@ -1,10 +1,9 @@
 import "./NavModalOption.scss"
 
-const NavModalOption = ({ label }) => {
+export default function NavModalOption({ label }) {
 
   return (
     <div className="nav-modal__option">{label}</div>
   )
 }
 
-export default NavModalOption

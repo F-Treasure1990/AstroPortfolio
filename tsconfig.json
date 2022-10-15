@@ -16,6 +16,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "allowSyntheticDefaultImports": true,
     "types": [
       "astro/client"
     ],

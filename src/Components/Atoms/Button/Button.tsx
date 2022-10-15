@@ -1,19 +1,18 @@
 import "./Button.scss"
 interface iButton {
-  variant: "solid" | "border" | "green" | "purple" | "neutral";
+  variant: "solid" | "border" | "code" | "design" | "neutral" | string;
   label?: string | Date;
   children?: React.ReactNode;
 }
 
-const Button: React.FC<iButton> = ({ variant, children, label }) => {
+export default function Button({ variant, children, label }:iButton) {
   return (
     <button className={`btn ${variant}`}>
       {children}
       {label}
-      {variant === "green" && "code"}
-      {variant === "purple" && "design"}
+      {variant === "code" && "code"}
+      {variant === "design" && "design"}
     </button>
   )
 }
 
-export default Button

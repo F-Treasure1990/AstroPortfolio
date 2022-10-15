@@ -1,13 +1,21 @@
+@use "@styles/abstracts" as *;
 .project__subcard {
-  flex: 1 1 322px;
-  height: 216px;
+  flex: 1 1 288px;
+  height: auto;
   background-color: var(--c-secondary);
   border-radius: 8px;
   padding: 16px 12px;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
+@include breakpoint-down(medium) {
+  max-width:90%;
+  margin: 0 auto;
+}
   &-top {
     display: flex;
     justify-content: space-between;
@@ -45,6 +53,7 @@
     font-size: 18px;
     line-height: 24px;
     -webkit-line-clamp: 3;
+    text-transform: capitalize;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
