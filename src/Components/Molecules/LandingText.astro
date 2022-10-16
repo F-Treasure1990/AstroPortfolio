@@ -4,7 +4,6 @@ import Paragraphlayout from "@layouts/ParagraphLayout.astro";
 import Button from "@components/Atoms/Button/Button";
 import Download from "@components/Atoms/Icons/Download.astro";
 import Message from "@components/Atoms/Icons/message.astro";
-
 ---
 
 <section class="landing-text">
@@ -28,8 +27,10 @@ import Message from "@components/Atoms/Icons/message.astro";
     </Paragraphlayout>
   </div>
   <div class="landing-text__buttons">
-    <Button label="download CV" variant="solid" flashMessage client:load><Download /></Button>
-    <a href="mailto:fentoncodes@gmail.com" >
+    <Button label="download CV" variant="solid" flashMessage client:load
+      ><Download />
+    </Button>
+    <a href="mailto:fentoncodes@gmail.com">
       <Button variant="border" label="message"><Message /></Button>
     </a>
   </div>
@@ -144,6 +145,10 @@ import Message from "@components/Atoms/Icons/message.astro";
     &__buttons {
       display: flex;
       column-gap: 16px;
+
+      @include breakpoint-down(small) {
+        margin-top: 16px;
+      }
 
       @include breakpoint-down(x-small) {
         column-gap: 8px;
