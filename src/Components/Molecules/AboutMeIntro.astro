@@ -3,9 +3,7 @@ import AboutMeDP from "@layouts/images/AboutMeDP.astro";
 ---
 
 <section class="about-me">
-  <div class="about-me__pic">
     <AboutMeDP />
-  </div>
   <p class="about-me__paragraph">
     Hi, My name is Fenton and what started as a hobby has quickly become an
     obsession. It all started with a Traversy Media tutorial on YouTube,
@@ -37,22 +35,6 @@ import AboutMeDP from "@layouts/images/AboutMeDP.astro";
       justify-content: center;
       padding: 24px 0;
       text-align: center;
-    }
-
-    &__pic {
-      min-width: 210px;
-      min-height: 244px;
-      margin-left: -50px;
-      display: flex;
-      @include breakpoint-down(medium) {
-        min-width: 180px;
-        margin-left: 0px;
-        min-height: 210px;
-      }
-      @include breakpoint-down(x-small) {
-        min-width: 160px;
-        min-height: 186px;
-      }
     }
 
     &__paragraph {
