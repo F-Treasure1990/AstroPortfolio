@@ -16,7 +16,7 @@ import LandingImg from "@layouts/images/LandingImg.astro";
   @use "@styles/abstracts" as *;
 
   .landing {
-    margin: 160px auto 80px auto; 
+    margin: 160px auto 80px auto;
     border: 1px solid var(--c-highlight);
     width: 100%;
     max-width: 1200px;
@@ -28,9 +28,14 @@ import LandingImg from "@layouts/images/LandingImg.astro";
     position: relative;
     overflow: hidden;
 
+    @include breakpoint-down(x-small) {
+      margin: 120px auto 80px auto;
+    }
+
     &__margin {
       margin: 0 8px;
     }
+
     &__img {
       position: absolute;
       /* 67px - -190px / 1200 - 768 */
@@ -44,7 +49,6 @@ import LandingImg from "@layouts/images/LandingImg.astro";
       }
       @include breakpoint-down(small) {
         /* opacity: 0.6; */
-
       }
     }
   }
