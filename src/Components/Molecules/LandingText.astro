@@ -4,16 +4,14 @@ import Paragraphlayout from "@layouts/ParagraphLayout.astro";
 import Button from "@components/Atoms/Button/Button";
 import Download from "@components/Atoms/Icons/Download.astro";
 import Message from "@components/Atoms/Icons/message.astro";
+
 ---
 
 <section class="landing-text">
-  <!-- Intro Text -->
   <p class="landing-text__intro-text">Hi, my name is</p>
-  <!-- Name Text -->
   <div class="landing-text__name">
     Fenton <span class="landing-text__name-highlight">Treasure</span>
   </div>
-  <!-- Subheading Text & symbol -->
   <div class="landing-text__subheading">
     <AndSymbol />
     <p class="landing-text__subheading-text">
@@ -21,7 +19,6 @@ import Message from "@components/Atoms/Icons/message.astro";
       <span>Web</span>
     </p>
   </div>
-  <!-- Paragraph -->
   <div class="landing-text__paragraph">
     <Paragraphlayout>
       I’m a self-taught developer specialising in building and designing for
@@ -30,10 +27,9 @@ import Message from "@components/Atoms/Icons/message.astro";
       skills
     </Paragraphlayout>
   </div>
-  <!-- Buttons section -->
   <div class="landing-text__buttons">
-    <Button label="download CV" variant="solid"><Download /></Button>
-    <a href="mailto:fentoncodes@gmail.com" className="navbar-button">
+    <Button label="download CV" variant="solid" flashMessage client:load><Download /></Button>
+    <a href="mailto:fentoncodes@gmail.com" >
       <Button variant="border" label="message"><Message /></Button>
     </a>
   </div>

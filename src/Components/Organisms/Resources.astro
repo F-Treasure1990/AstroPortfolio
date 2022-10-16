@@ -19,26 +19,27 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
 </SectionHeading>
 
 <ResourcesCostMenu />
+
 <div class="grid">
   <div class="resource__small">
-    <ResourcesCard size="sm" cost="free" title="Traversy Media">
+    <ResourcesCard size="sm" cost="free" title="Traversy Media" url="https://www.youtube.com/c/TraversyMedia">
       <Youtube slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
-        Fantastic introductory crash courses on a multitude of coding languages
-        / frameworks.
+        Specializes in everything from HTML5 to front end frameworks, as well as
+        server side technologies
       </p>
     </ResourcesCard>
 
-    <ResourcesCard size="sm" cost="free" title="Code Cademy">
+    <ResourcesCard size="sm" cost="free" title="Codecademy" url="https://www.codecademy.com/">
       <CodeCademy slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
-        Fantastic introductory crash courses on a multitude of coding languages
-        / frameworks.
+        Created to teach programming in an engaging, effective way. Use it to
+        learn 12 different programming languages.
       </p>
     </ResourcesCard>
   </div>
 
-  <ResourcesCard size="md" cost="paid" title="Udemy">
+  <ResourcesCard size="md" cost="paid" title="Udemy" url="https://www.udemy.com/">
     <Udemy slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
       Online learning and teaching marketplace with over 204,000 courses and 54
@@ -46,7 +47,7 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
     </p>
   </ResourcesCard>
 
-  <ResourcesCard size="lg" title="FreeCodeCamp" cost="free">
+  <ResourcesCard size="lg" title="FreeCodeCamp" cost="free" url="https://www.freecodecamp.org/">
     <FreeCodeCamp slot="resource-card__logo" />
     <p slot="resource-card__paragraph" style="margin-bottom:12px">
       FreeCodeCamp is a non-profit organization that consists of an interactive
@@ -66,63 +67,67 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
   </ResourcesCard>
 
   <div class="resource__small">
-    <ResourcesCard size="sm" title="Codewars" cost="free">
+    <ResourcesCard size="sm" title="Codewars" cost="free" url="https://www.codewars.com/">
       <Codewars slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
-        Fantastic introductory crash courses on a multitude of coding languages
-        / frameworks.
+        True to the essence of kata, Codewars lets you practice coding through
+        repetition and with other peers.
       </p>
     </ResourcesCard>
 
-    <ResourcesCard size="sm" title="JavaScript Mas" cost="free">
+    <ResourcesCard size="sm" title="Kevin Powell" cost="free" url="https://www.youtube.com/kepowob">
       <Youtube slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
-        Fantastic introductory crash courses on a multitude of coding languages
-        / frameworks.
+        Known as the King of CSS, Kevin teaches all there is to understanding
+        HTML & CSS, along with a splash of JS.
       </p>
     </ResourcesCard>
   </div>
 
-  <ResourcesCard size="md" title="MDN Web Docs" cost="free">
+  <ResourcesCard size="md" title="MDN Web Docs" cost="free" url="https://developer.mozilla.org/en-US/">
     <MDN slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
-      Online learning and teaching marketplace with over 204,000 courses and 54
-      million students. Learn programming, marketing, data science and more.
+      The MDN Web Docs site provides information about Open Web technologies
+      including HTML, CSS, and APIs for both Web sites and progressive web apps.
     </p>
   </ResourcesCard>
 
-  <ResourcesCard size="md" title="SkillShare" cost="paid">
+  <ResourcesCard size="md" title="SkillShare" cost="paid" url="https://www.skillshare.com/">
     <SkillShare slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
-      Online learning and teaching marketplace with over 204,000 courses and 54
-      million students. Learn programming, marketing, data science and more.
+      Skillshare is an online learning platform with thousands of creative
+      courses and classes taught by experts to help you learn new skills, with
+      emphasise on the creative side
     </p>
   </ResourcesCard>
 
   <ResourcesCard size="lg" title="Personal Resource Collection" cost="free">
     <Logo140 slot="resource-card__logo" />
     <p slot="resource-card__paragraph" style="margin-bottom:12px">
-      FreeCodeCamp is a non-profit organization that consists of an interactive
-      learning web platform, an online community forum, chat rooms, online
-      publications and local organizations that intend to make learning web
-      development accessible to anyone
+      During my time being a self-taught developer, I have encountered many free
+      resources to assist my projects. I find myself utilising certain resources
+      more often than others in my projects, due to this I have kept a log of
+      these and offer them through the link below.
     </p>
     <p slot="resource-card__paragraph" style="margin-bottom:12px">
-      Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten jobs
-      at tech companies including Apple, Google, Microsoft, Spotify and Amazon
-      to name a few.
+      The link goes to a Github readme document with an array of resource
+      topics, to give a few - CSS animations, CSS frameworks, fonts, HTML
+      templates, icons, svg images, picture assets, pallets. All these are free
+      and some have a paid tier.
     </p>
     <p slot="resource-card__paragraph" style="margin-bottom:12px">
-      FreeCodeCamp has a very popular youtube channel covering an array of
-      beginner projects.
+      Any contributions to the resouce list is welcomed, I plan to keep
+      developing it over time. Contact me through email or clone the repo to
+      make commits.
     </p>
   </ResourcesCard>
 
-  <ResourcesCard size="md" title="Laracasts" cost="paid">
+  <ResourcesCard size="md" title="Laracasts" cost="paid" url="https://laracasts.com/">
     <Laracasts slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
-      Online learning and teaching marketplace with over 204,000 courses and 54
-      million students. Learn programming, marketing, data science and more.
+      There's no shortage of content at Laracasts. Push your web development
+      skills to the next level, through expert screencasts on Laravel, Vue, and
+      so much more.
     </p>
   </ResourcesCard>
 </div>

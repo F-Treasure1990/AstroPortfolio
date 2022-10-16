@@ -7,8 +7,9 @@
   padding: 16px 12px;
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 12px;
   transition: transform 0.3s ease;
+  justify-content: space-between;
   &:hover {
     transform: translateY(-4px);
   }
@@ -58,16 +59,20 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    // text-align: center;
   }
 
   &-project-info {
     display: flex;
     column-gap: 12px;
+    // justify-content: center;
+    margin-top: 12px;
   }
 
   &-links {
     display: flex;
     column-gap: 16px;
     margin-top: 8px;
+    // justify-content: center;
   }
 }

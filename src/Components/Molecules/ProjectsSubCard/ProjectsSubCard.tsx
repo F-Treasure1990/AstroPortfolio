@@ -29,32 +29,29 @@ export default function ProjectsSubCard({ proj }: { proj: IProject }) {
           proj?.type === "design" && <div className="project__subcard-btn project__subcard-btn--purple">design</div>
         }
       </div>
-
-      <div className="project__subcard-title">
-        {proj?.title}
-      </div>
-
-      <div className="project__subcard-project-info">
-        <div className="project__subcard-btn--project-info project__subcard-btn">
-          {proj?.date}
+      <div >
+        <div className="project__subcard-title">
+          {proj?.title}
         </div>
-        <div className="project__subcard-btn--project-info project__subcard-btn">
-          {proj?.project}
+
+        <div className="project__subcard-project-info">
+          <div className="project__subcard-btn--project-info project__subcard-btn">
+            {proj?.date}
+          </div>
+          <div className="project__subcard-btn--project-info project__subcard-btn">
+            {proj?.project}
+          </div>
         </div>
       </div>
       <div className="project__subcard-links">
         {
           proj?.github && (
-            <a href={proj.github} target='_blank'>
-              <Button variant="border" label="github" />
-            </a>
+              <Button variant="border" label="github" flashMessage />
           )
         }
         {
           proj?.link && (
-            <a href={proj?.link} target="_blank">
-              <Button variant="solid" label="link" />
-            </a>
+              <Button variant="solid" label="link" flashMessage />
           )
         }
       </div>
@@ -62,3 +59,18 @@ export default function ProjectsSubCard({ proj }: { proj: IProject }) {
   )
 }
 
+/* { */
+/*           proj?.github && ( */
+/*             <a href={proj.github} target='_blank'> */
+/*               <Button variant="border" label="github" /> */
+/*             </a> */
+/*           ) */
+/*         } */
+/*         { */
+/*           proj?.link && ( */
+/*             <a href={proj?.link} target="_blank"> */
+/*               <Button variant="solid" label="link" /> */
+/*             </a> */
+/*           ) */
+/*         } */
+/**/

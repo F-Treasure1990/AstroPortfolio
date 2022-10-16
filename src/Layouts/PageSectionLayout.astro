@@ -1,5 +1,5 @@
 ---
-const { bgdark, section }: { bgdark?: boolean; section: string } = Astro.props;
+const { bgdark, section }: { bgdark?: boolean; section?: string } = Astro.props;
 ---
 
 <section class={`${bgdark && "dark-bg"}`} id={section}>

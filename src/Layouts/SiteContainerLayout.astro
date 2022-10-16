@@ -2,7 +2,6 @@
 import "@styles/global.scss";
 import Navbar from "@components/Organisms/Navbar/Navbar";
 import Footer from "@components/Organisms/Footer.astro";
-import NavModal from "@components/Molecules/NavModal/NavModal";
 
 export interface HeaderProps {
   title: string;
@@ -17,6 +16,7 @@ const { title = "Fenton Treasure | Portfolio" } = Astro.props as HeaderProps;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

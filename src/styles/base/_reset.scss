@@ -20,9 +20,12 @@ html:focus-within {
 }
 
 
-
 a {
   color: var(--t-active);
+    text-decoration: none;
+  &:active {
+    text-decoration: none;
+  }
 }
 
 h1 {

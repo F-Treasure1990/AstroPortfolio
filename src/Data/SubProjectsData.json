@@ -7,7 +7,7 @@
       "type": "code",
       "project": "personal",
       "github": "https://github.com/srobo",
-      "link": "www.google.com"
+      "link": "https://www.google.com/"
     },
     {
       "index": 2,
@@ -25,7 +25,7 @@
       "type": "code",
       "project": "featured",
       "github": "https://github.com/srobo",
-      "link": "www.google.com"
+      "link":null 
     },
     {
       "index": 4,
@@ -34,7 +34,7 @@
       "type": "code",
       "project": "personal",
       "github": "https://github.com/srobo",
-      "link": "www.google.com"
+      "link": "https://www.google.com/"
     },
     {
       "index": 5,
@@ -43,7 +43,7 @@
       "type": "design",
       "project": "personal",
       "github": "https://github.com/srobo",
-      "link": ""
+      "link": "ddf"
     },
     {
       "index": 6,
@@ -52,7 +52,7 @@
       "type": "code",
       "project": "personal",
       "github": "https://github.com/srobo",
-      "link": ""
+      "link": null
     }
   ],
   [
@@ -90,7 +90,7 @@
       "type": "code",
       "project": "personal",
       "github": "https://github.com/srobo",
-      "link": ""
+      "link": "dksj"
     },
     {
       "index": 11,

@@ -1,5 +1,4 @@
 @use "@styles/abstracts" as *;
-
 .nav-modal {
   background-color: var(--c-secondary);
   position: fixed;
@@ -13,9 +12,34 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  padding: 0 16px;
+
   &__options {
-    margin-top: 40px;
-    width: 400px;
+    margin: 40px auto;
+    max-width: 320px;
+    width: 100%;
+
+  }
+
+  &__theme {
+    display: flex;
+    color: var(--c-f-off-white);
+    font-family: Poppins;
+    text-transform: capitalize;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    padding: 12px 12px;
+    margin:24px 0;
+    background-color: var(--c-primary);
+    border-radius: 6px;
+    font-weight: 200;
+    font-size: 14px;
+  }
+  &__media {
+    display: flex;
+    justify-content:center;
+    column-gap: 32px;
   }
   &__divider {
     height: 24px;

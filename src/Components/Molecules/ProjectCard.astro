@@ -44,10 +44,20 @@ const { title, date, type, project, image, description, github, link, stack } =
     </div>
     <div class="project__card-bottom-container">
       <div class="project__card-link-btns">
-        <a href={github} target="_blank">
-          <Button variant="border" label="github"><Github /></Button>
-        </a>
-
+        {
+          github ? (
+            <a href={github} target="_blank">
+              <Button variant="border" label="github">
+                <Github />
+              </Button>
+            </a>
+          ) : (
+            <Button variant="border" label="github" flashMessage client:visible>
+              <Github />
+            </Button>
+          )
+        }
+       
         {
           link && (
             <a href={link} target="_blank">

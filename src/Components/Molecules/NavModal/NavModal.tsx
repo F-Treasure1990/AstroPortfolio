@@ -4,8 +4,12 @@ import BurgerMenu from "@components/Atoms/BurgerMenu/BurgerMenu"
 import NavbarLogo from "@components/Atoms/Icons/NavbarLogo"
 import NavModalOption from "@components/Atoms/NavModalOption/NavModalOption"
 import { navOptions } from "@components/Organisms/Navbar/Navbar"
+import ThemeToggle from "@components/Atoms/ThemeToggle/ThemeToggle"
+import Linkd20 from "@components/Atoms/Icons/Linkd20"
+import Github20 from "@components/Atoms/Icons/Github20"
+import Insta20 from "@components/Atoms/Icons/Insta20"
 
-export default function NavModal(){
+export default function NavModal() {
   const v = {
     i: {
       opacity: 0
@@ -30,10 +34,23 @@ export default function NavModal(){
       {/* modal navbar options */}
       <div className="nav-modal__options">
         {
-          navOptions.map(navOptionLabel => (
-            <NavModalOption label={navOptionLabel} />
+          navOptions.map((navOptionLabel, i) => (
+            <NavModalOption label={navOptionLabel} key={`${navOptionLabel}-${i}`} />
           ))
         }
+        <div className="nav-modal__theme">
+          appearance
+          <ThemeToggle />
+        </div>
+    <div className="nav-modal__media">
+      <a href="#"><Insta20 /></a>
+      <a href="#">
+        <Github20 />
+      </a>
+      <a href="#">
+        <Linkd20 />
+      </a>
+    </div>
       </div>
     </motion.div>
   )

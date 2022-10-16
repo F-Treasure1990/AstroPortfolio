@@ -1,6 +1,7 @@
 import "./QuoteText.scss"
 import useQuote from "src/Hooks/useQuote";
-import { CubeSpinner } from "react-spinners-kit"
+import pkg from "react-spinners-kit"
+const {CubeSpinner} = pkg
 
 
 export default function QuoteText() {

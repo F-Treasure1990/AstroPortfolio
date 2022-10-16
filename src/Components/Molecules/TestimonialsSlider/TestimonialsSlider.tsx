@@ -78,7 +78,7 @@ export default function TestimonialSlider() {
       {/*   {"‣"} */}
       {/* </div> */}
       <div className="testimonial-slider__picker">
-        {testimonialData.map((_, index) => (<TestimonialsPicker selected={index === testimonalIndex} />))}
+        {testimonialData.map((_, index) => (<TestimonialsPicker selected={index === testimonalIndex} key={index}/>))}
       </div>
     </div>
   );

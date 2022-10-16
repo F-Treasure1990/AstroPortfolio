@@ -1,19 +1,26 @@
 ---
 import BreifCase from "@components/Atoms/Icons/BreifCase.astro";
 import ParagraphLayout from "@layouts/ParagraphLayout.astro";
+import ScholarHat from "@components/Atoms/Icons/ScholarHat.astro";
 
 export interface Props {
   date: (string | number)[];
   title: string;
+  icon: "education" | "work";
 }
 
-const { date = [2022, "present"], title = "Exp Title" } = Astro.props as Props;
+const {
+  date = [2022, "present"],
+  title = "Exp Title",
+  icon,
+} = Astro.props as Props;
 ---
 
 <div class="experience-option">
   <div class="experience-option__icon">
     <slot name="experience-icon">
-      <BreifCase />
+      {icon === "work" && <BreifCase />}
+      {icon === "education" && <ScholarHat/>}
     </slot>
     <div class="experience-option__icon-line"></div>
   </div>
@@ -69,8 +76,8 @@ const { date = [2022, "present"], title = "Exp Title" } = Astro.props as Props;
       margin-bottom: 8px;
       text-transform: capitalize;
       @include breakpoint-down(medium) {
-          font-size: 20px;
-        }
+        font-size: 20px;
+      }
     }
 
     &__details {

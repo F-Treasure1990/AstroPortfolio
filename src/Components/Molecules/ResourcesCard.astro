@@ -5,8 +5,9 @@ export type Props = {
   size: "md" | "sm" | "lg";
   title: string;
   cost: "paid" | "free";
+  url?:string
 };
-const { size, title, cost } = Astro.props as Props;
+const { size, title, cost, url} = Astro.props as Props;
 ---
 
 <div class={`resource-card resource-card--${size}`}>
@@ -19,7 +20,10 @@ const { size, title, cost } = Astro.props as Props;
       <slot name="resource-card__paragraph" />
     </div>
   </div>
-  <Button label="visit" variant="solid" />
+  <a href={url} target="_blank">
+  <Button label="visit" variant="solid" client:visible flashMessage={url ? undefined :
+  true}/>
+  </a>
   <div class="resource-card__logo">
     <slot name="resource-card__logo" />
   </div>
@@ -66,9 +70,13 @@ const { size, title, cost } = Astro.props as Props;
     }
 
     &--sm {
+      line-height: 20px;
       & .resource-card__title {
         font-size: 20px;
+      }
 
+      & .resource-card__title-wrapper {
+        margin-bottom: 8px;
       }
       & .resource-card__logo {
         bottom: -36px;
@@ -79,6 +87,9 @@ const { size, title, cost } = Astro.props as Props;
 
     &--md {
       grid-column-end: span 2;
+      & .resource-card__title-wrapper {
+        margin-bottom: 8px;
+      }
     }
 
     &--lg {

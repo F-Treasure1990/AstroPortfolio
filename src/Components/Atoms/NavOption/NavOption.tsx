@@ -18,7 +18,10 @@ interface Props {
 export default function NavOption({ section, index }: Props) {
 
   const scroll = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({inline:"start"});
+    /* document.getElementById(id)?.scrollIntoView(); */
+    const section = document.getElementById(id)
+    const y = section.getBoundingClientRect().top + window.pageYOffset - 72;
+    window.scrollTo({top:y, behavior:'smooth'})
   };
 
   return (
