@@ -11,7 +11,10 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--c-secondary);
-    outline: 2px solid var(--c-accent);
+    // border: 2px solid var(--c-accent);
+    outline-width:2px;
+    outline-style: solid;
+    outline-color: var(--c-accent);
     margin-bottom: 16px;
   }
   &__name {

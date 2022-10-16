@@ -26,7 +26,9 @@ export default function Navbar() {
       </AnimatePresence>
       <section className="navbar" >
         <div className="navbar-container">
-          <NavbarLogo />
+          <div className="navbar__logo-wrapper">
+            <NavbarLogo />
+          </div>
           <div className="navbar__main">
             <div className="navbar__main-options-container">
               {
