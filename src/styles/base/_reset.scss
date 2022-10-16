@@ -1,11 +1,12 @@
 //Reset
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   font-family: "Poppins", "Cabin", sans-serif;
   background-color: var(--c-primary);
 }
@@ -19,10 +20,9 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-
 a {
   color: var(--t-active);
-    text-decoration: none;
+  text-decoration: none;
   &:active {
     text-decoration: none;
   }

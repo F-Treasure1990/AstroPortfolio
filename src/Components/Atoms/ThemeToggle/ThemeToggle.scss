@@ -13,6 +13,7 @@
     cursor: pointer;
     transition: outline 0.2s ease-out;
     outline: 1px solid var(--c-highlight);
+    -moz-box-sizing: border-box;
     &[data-isOn="true"] {
       justify-content: flex-end;
     }
