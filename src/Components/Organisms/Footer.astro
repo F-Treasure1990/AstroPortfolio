@@ -24,37 +24,45 @@ import Insta20 from "@components/Atoms/Icons/Insta20";
 </div>
 
 <style lang="scss">
-@use "@styles/abstracts" as *;
+  @use "@styles/abstracts" as *;
   .footer {
     max-width: 1000px;
     margin: 80px auto 0 auto;
     margin-bottom: 12px;
     display: flex;
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
+
     &__icon {
       width: max-content;
-      max-width: 319px;
+      max-width: 280px;
       width: 80%;
+      @include breakpoint-down(small) {
+      max-width: 220px;
+      }
+      @include breakpoint-down(x-small) {
+      max-width: 180px;
+      }
     }
 
     &__info {
       display: flex;
       justify-content: space-between;
-      width:100%;
+      width: 100%;
       color: var(--c-f-off-white);
       line-height: 20px;
       font-size: 10px;
       font-weight: 200;
       margin-top: 40px;
-      column-gap:24px;
+      column-gap: 24px;
+      padding: 0 16px;
     }
     &__media {
       display: inherit;
       height: 16px;
       gap: 32px;
-    @include breakpoint-down(small) {
-gap: 24px;
+      @include breakpoint-down(small) {
+        gap: 24px;
       }
     }
   }

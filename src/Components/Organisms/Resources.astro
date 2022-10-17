@@ -22,7 +22,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
 
 <div class="grid">
   <div class="resource__small">
-    <ResourcesCard size="sm" cost="free" title="Traversy Media" url="https://www.youtube.com/c/TraversyMedia">
+    <ResourcesCard
+      size="sm"
+      cost="free"
+      title="Traversy Media"
+      url="https://www.youtube.com/c/TraversyMedia"
+    >
       <Youtube slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
         Specializes in everything from HTML5 to front end frameworks, as well as
@@ -30,7 +35,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
       </p>
     </ResourcesCard>
 
-    <ResourcesCard size="sm" cost="free" title="Codecademy" url="https://www.codecademy.com/">
+    <ResourcesCard
+      size="sm"
+      cost="free"
+      title="Codecademy"
+      url="https://www.codecademy.com/"
+    >
       <CodeCademy slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
         Created to teach programming in an engaging, effective way. Use it to
@@ -39,7 +49,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
     </ResourcesCard>
   </div>
 
-  <ResourcesCard size="md" cost="paid" title="Udemy" url="https://www.udemy.com/">
+  <ResourcesCard
+    size="md"
+    cost="paid"
+    title="Udemy"
+    url="https://www.udemy.com/"
+  >
     <Udemy slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
       Online learning and teaching marketplace with over 204,000 courses and 54
@@ -47,7 +62,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
     </p>
   </ResourcesCard>
 
-  <ResourcesCard size="lg" title="FreeCodeCamp" cost="free" url="https://www.freecodecamp.org/">
+  <ResourcesCard
+    size="lg"
+    title="FreeCodeCamp"
+    cost="free"
+    url="https://www.freecodecamp.org/"
+  >
     <FreeCodeCamp slot="resource-card__logo" />
     <p slot="resource-card__paragraph" style="margin-bottom:12px">
       FreeCodeCamp is a non-profit organization that consists of an interactive
@@ -67,7 +87,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
   </ResourcesCard>
 
   <div class="resource__small">
-    <ResourcesCard size="sm" title="Codewars" cost="free" url="https://www.codewars.com/">
+    <ResourcesCard
+      size="sm"
+      title="Codewars"
+      cost="free"
+      url="https://www.codewars.com/"
+    >
       <Codewars slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
         True to the essence of kata, Codewars lets you practice coding through
@@ -75,7 +100,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
       </p>
     </ResourcesCard>
 
-    <ResourcesCard size="sm" title="Kevin Powell" cost="free" url="https://www.youtube.com/kepowob">
+    <ResourcesCard
+      size="sm"
+      title="Kevin Powell"
+      cost="free"
+      url="https://www.youtube.com/kepowob"
+    >
       <Youtube slot="resource-card__logo" />
       <p slot="resource-card__paragraph">
         Known as the King of CSS, Kevin teaches all there is to understanding
@@ -84,7 +114,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
     </ResourcesCard>
   </div>
 
-  <ResourcesCard size="md" title="MDN Web Docs" cost="free" url="https://developer.mozilla.org/en-US/">
+  <ResourcesCard
+    size="md"
+    title="MDN Web Docs"
+    cost="free"
+    url="https://developer.mozilla.org/en-US/"
+  >
     <MDN slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
       The MDN Web Docs site provides information about Open Web technologies
@@ -92,7 +127,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
     </p>
   </ResourcesCard>
 
-  <ResourcesCard size="md" title="SkillShare" cost="paid" url="https://www.skillshare.com/">
+  <ResourcesCard
+    size="md"
+    title="SkillShare"
+    cost="paid"
+    url="https://www.skillshare.com/"
+  >
     <SkillShare slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
       Skillshare is an online learning platform with thousands of creative
@@ -122,7 +162,12 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
     </p>
   </ResourcesCard>
 
-  <ResourcesCard size="md" title="Laracasts" cost="paid" url="https://laracasts.com/">
+  <ResourcesCard
+    size="md"
+    title="Laracasts"
+    cost="paid"
+    url="https://laracasts.com/"
+  >
     <Laracasts slot="resource-card__logo" />
     <p slot="resource-card__paragraph">
       There's no shortage of content at Laracasts. Push your web development
@@ -133,7 +178,7 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
 </div>
 
 <style lang="scss">
-  @import url("https://fonts.googleapis.com/css?family=Arvo");
+  @use "@styles/abstracts" as *;
 
   .grid {
     display: grid;
@@ -142,14 +187,23 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
     /* change this at smaller screen files to aid with height */
     grid-auto-rows: max-content;
     grid-auto-flow: dense;
+    @include breakpoint-down(small) {
+      gap: 12px;
+    }
+    @include breakpoint-down(x-small) {
+      gap: 8px;
+    }
   }
   .resource__small {
     display: flex;
     grid-column-end: span 2;
     gap: 16px;
-
-    @media screen and (max-width: 400px) {
+    @include breakpoint-down(small) {
+      gap: 12px;
+    }
+    @include breakpoint-down(x-small) {
       flex-wrap: wrap;
+      gap: 8px;
     }
   }
 </style>

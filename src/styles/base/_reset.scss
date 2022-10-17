@@ -16,6 +16,17 @@ html {
   scroll-behavior: smooth;
 }
 
+
+br {
+  display: block;
+  content: "";
+  border-bottom: 4px solid transparent; // Works in Chrome/Safari
+}
+@-moz-document url-prefix() {
+  br {
+    margin-bottom: 4px; // As 'border-bottom' doesn't work in firefox and 'margin-bottom' doesn't work in Chrome.
+  }
+}
 html:focus-within {
   scroll-behavior: smooth;
 }

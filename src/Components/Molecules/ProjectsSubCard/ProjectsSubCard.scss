@@ -13,13 +13,22 @@
   &:hover {
     transform: translateY(-4px);
   }
-@include breakpoint-down(medium) {
-  max-width:90%;
-  margin: 0 auto;
-}
+  @include breakpoint-down(medium) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
   &-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    @include breakpoint-down(x-small) {
+      margin-bottom: 4px;
+    }
+  }
+  &-icon {
+    // height: 20px;
+    width: 24px;
+    display: flex;
     align-items: center;
   }
 

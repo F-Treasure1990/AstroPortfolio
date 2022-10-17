@@ -21,7 +21,9 @@ export default function ProjectsSubCard({ proj }: { proj: IProject }) {
   return (
     <motion.div className="project__subcard" variants={cardAnimation}>
       <div className="project__subcard-top">
+      <div className="project__subcard-icon">
         <FolderIcon />
+      </div> 
         {
           proj?.type === "code" && <div className="project__subcard-btn project__subcard-btn--green">code</div>
         }

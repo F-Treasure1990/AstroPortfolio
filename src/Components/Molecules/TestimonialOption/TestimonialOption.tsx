@@ -1,4 +1,5 @@
 import "./TestimonialOption.scss"
+import {motion} from "framer-motion"
 
 type Props = {
   testIndex: {
@@ -20,7 +21,7 @@ export default function TestimonialOption({ testIndex }: Props) {
   return (
 
     <section className="testimonial">
-      <img className="testimonial__img" onDragStart={preventDragHandler} src={`testimonialsImgs/${img}.png`} alt="person" />
+      <motion.img initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.6}} className="testimonial__img" onDragStart={preventDragHandler} src={`testimonialsImgs/${img}.png`} alt="person" />
       <h4 className="testimonial__name">{name}</h4>
       <p className="testimonial__subtitle">{job}</p>
       <p className="testimonial__paragraph">
