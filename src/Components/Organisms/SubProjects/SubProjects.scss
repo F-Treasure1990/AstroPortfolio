@@ -1,3 +1,4 @@
+@use "@styles/abstracts" as *;
 .sub-projects {
   margin-top: 80px;
   &__title {
@@ -18,11 +19,16 @@
     margin-bottom: 16px;
     height: max-content;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    @include breakpoint-down(small) {
+      width: 90%;
+      margin: 0 auto 16px auto;
+    }
   }
   &__archived-projects {
     text-transform: capitalize;
-    padding: 8px 16px;
+    padding: 6px 12px;
     background-color: var(--c-secondary);
     width: max-content;
     font-family: Cabin;
@@ -61,4 +67,3 @@
     min-height: 32px;
   }
 }
-

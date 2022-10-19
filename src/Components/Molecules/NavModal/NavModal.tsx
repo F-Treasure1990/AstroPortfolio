@@ -25,7 +25,10 @@ export default function NavModal() {
     <motion.div className="nav-modal" variants={v} animate="a" initial="i" exit="i">
       {/* modal navbar */}
       <div className="nav-modal__navbar">
-        <NavbarLogo />
+
+        <div className="navbar__logo-wrapper">
+          <NavbarLogo />
+        </div>
         <div className="nav-modal__right">
           <div className="nav-modal__divider" />
           <BurgerMenu />
@@ -42,15 +45,15 @@ export default function NavModal() {
           appearance
           <ThemeToggle />
         </div>
-    <div className="nav-modal__media">
-      <a href="#"><Insta20 /></a>
-      <a href="#">
-        <Github20 />
-      </a>
-      <a href="#">
-        <Linkd20 />
-      </a>
-    </div>
+        <div className="nav-modal__media">
+          <a href="#"><Insta20 /></a>
+          <a href="#">
+            <Github20 />
+          </a>
+          <a href="#">
+            <Linkd20 />
+          </a>
+        </div>
       </div>
     </motion.div>
   )

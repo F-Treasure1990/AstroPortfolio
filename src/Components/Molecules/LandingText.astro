@@ -81,13 +81,14 @@ import Message from "@components/Atoms/Icons/message.astro";
       }
 
       &-highlight {
-        background: linear-gradient(
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        background: -webkit-linear-gradient(
           160deg,
           var(--c-accent) 28%,
           var(--c-accent-l-30) 100%
         );
-        color: transparent;
-        background-clip: text;
+        -webkit-background-clip: text;
       }
     }
 

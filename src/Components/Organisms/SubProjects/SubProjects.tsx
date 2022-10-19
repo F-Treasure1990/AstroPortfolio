@@ -12,7 +12,7 @@ export default function SubProjects() {
       <div className="sub-projects__btns">
         <Button variant="border" label="view archive" flashMessage />
         <div className="sub-projects__archived-projects">
-          <span className="sub-projects__archived-projects-num">22</span> archived projects
+          <span className="sub-projects__archived-projects-num">22</span> archived 
         </div>
       </div>
       <div className="sub-projects__cards">
