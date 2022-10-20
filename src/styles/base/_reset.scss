@@ -11,6 +11,10 @@ body {
   background-color: var(--c-primary);
 }
 
+.body-overflow {
+  overflow:hidden;
+}
+
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;

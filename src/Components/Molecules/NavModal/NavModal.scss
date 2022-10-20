@@ -61,7 +61,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 72px;
+    height: 71px;
+    min-height:71px;
     border-bottom: 1px solid var(--c-highlight);
   }
 }
