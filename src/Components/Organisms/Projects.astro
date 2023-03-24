@@ -1,7 +1,6 @@
 ---
 import ProjectCard from "@components/Molecules/ProjectCard.astro";
 import SectionHeading from "@components/Molecules/SectionHeading.astro";
-const projectCardNumber = [1, 2, 3];
 import ProjectsMainData from "@data/ProjectsMainData.json";
 ---
 
@@ -12,8 +11,8 @@ a full list.
 
 <section class="projects">
   {
-    ProjectsMainData.map((projectInfo, i) => (
-      <ProjectCard projectCard={projectInfo} />
+    ProjectsMainData.map((projectInfo) => (
+      <ProjectCard projectCard={projectInfo}/>
     ))
   }
 </section>

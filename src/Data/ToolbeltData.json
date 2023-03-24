@@ -3,7 +3,7 @@
     {
       "name": "react",
       "link": "https://reactjs.org/",
-      "confidence": 85
+      "confidence": 90
     },
     {
       "name": "framerMotion",
@@ -13,7 +13,7 @@
     {
       "name": "laravel",
       "link": "https://laravel.com/",
-      "confidence": 60
+      "confidence": 50
     },
     {
       "name": "nestJS",
@@ -23,12 +23,12 @@
     {
       "name": "prisma",
       "link": "https://www.prisma.io/",
-      "confidence": 70
+      "confidence": 75
     },
     {
       "name": "tailwind",
       "link": "https://tailwindcss.com/",
-      "confidence": 85
+      "confidence": 90
     },
     {
       "name": "express",
@@ -50,7 +50,7 @@
     {
       "name": "HTML",
       "link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
-      "confidence": 90
+      "confidence": 95
     },
     {
       "name": "typeScript",
@@ -65,7 +65,7 @@
     {
       "name": "PHP",
       "link": "https://www.php.net/",
-      "confidence": 60
+      "confidence": 50
     },
     {
       "name": "javaScript",
@@ -75,7 +75,7 @@
     {
       "name": "lua",
       "link": "https://www.lua.org/",
-      "confidence": 70
+      "confidence": 40
     },
     {
       "name": "graphQL",
@@ -95,18 +95,13 @@
     {
       "name": "sass",
       "link": "https://sass-lang.com/",
-      "confidence": 95
+      "confidence": 90
     }
   ],
   [
     {
       "name": "neovim",
       "link": "https://neovim.io/",
-      "confidence": 85
-    },
-    {
-      "name": "postgres",
-      "link": "https://www.postgresql.org/",
       "confidence": 85
     },
     {
@@ -117,13 +112,12 @@
     {
       "name": "jest",
       "link": "https://jestjs.io/docs/tutorial-react",
-      "confidence": 85
+      "confidence": 70
     },
-    
     {
       "name": "postman",
       "link": "https://www.postman.com/",
-      "confidence": 70
+      "confidence": 80
     },
     {
       "name": "vite",
@@ -135,11 +129,12 @@
       "link": "https://www.docker.com/",
       "confidence": 50
     },
-        {
+    {
       "name": "XD",
       "link": "https://www.docker.com/",
       "confidence": 80
-    },    {
+    },
+    {
       "name": "illustrator",
       "link": "https://www.docker.com/",
       "confidence": 90

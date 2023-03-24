@@ -9,6 +9,7 @@ export default function ToolbeltCardsLayout() {
 
   return (
     <section className="toolbelt__cards-container" >
+      <div className="toolbelt__cards-wrapper">
       <AnimatePresence mode="wait">
         {
           ToolbeltData[toolbeltMenuOption - 1].map((cardOption, index) => (
@@ -20,6 +21,7 @@ export default function ToolbeltCardsLayout() {
           ))
         }
       </AnimatePresence>
+</div>
     </section >
   )
 }

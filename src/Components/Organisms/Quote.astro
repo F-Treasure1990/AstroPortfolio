@@ -4,7 +4,9 @@ import QuoteFetch from "@components/Atoms/QuoteFetch/QuoteFetch";
 ---
 
 <section class="quote">
-  <QuoteFetch client:load />
+  <div class="quote__container">
+    <QuoteFetch client:visible />
+  </div>
   <div class="quote__block">
     <QuoteBlock />
   </div>
@@ -18,17 +20,32 @@ import QuoteFetch from "@components/Atoms/QuoteFetch/QuoteFetch";
     justify-content: center;
     align-items: center;
     row-gap: 24px;
-    padding: 30px 40px 80px 40px;
+    padding: 0px 40px 80px 40px;
+    position: relative;
+    height: 360px;
+    margin-bottom:20px;
     &__block {
-      width: 200px;
+      width: 240px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.3;
+      z-index: 5;
       transition: width ease 0.3s;
       @include breakpoint-down(small) {
+        width: 210px;
+      }
+      @include breakpoint-down(x-small) {
         width: 180px;
       }
-
-      @include breakpoint-down(x-small) {
-        width: 160px;
-      }
+    }
+    &__container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
     }
   }
 </style>
