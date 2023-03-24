@@ -1,37 +1,9 @@
 @forward "./abstracts";
 @forward "./base";
 
-@font-face {
-  font-family: "Cabin", sans-serif;
-  font-weight: 400;
-  src: url("/fonts/cabin-regular.ttf") format("truetype");
-  font-style: normal;
-  font-display: optional;
-}
 
 @font-face {
-  font-family: "Cabin", sans-serif;
-  font-weight: 500;
-  src: url("/fonts/cabin-medium.ttf") format("truetype");
-  font-style: normal;
-  font-display: optional;
-}
-@font-face {
-  font-family: "Cabin", sans-serif;
-  font-weight: 600;
-  src: url("/fonts/cabin-semibold.ttf") format("truetype");
-  font-style: normal;
-  font-display: optional;
-}
-@font-face {
-  font-family: "Cabin", sans-serif;
-  font-weight: 700;
-  src: url("/fonts/cabin-bold.ttf") format("truetype");
-  font-style: normal;
-  font-display: optional;
-}
-@font-face {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   font-weight: 100;
   src: url("/fonts/poppins-thin.ttf") format("truetype");
   font-style: normal;
