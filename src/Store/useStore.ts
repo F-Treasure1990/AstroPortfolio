@@ -3,7 +3,6 @@ import BurgerMenuSlice, { IBurgerMenuSlice } from "@store/slices/BurgerMenuSlice
 import ToolbeltMenuSlice, { IToolbeltMenuSlice } from "@store/slices/ToolbeltMenuSlice"
 import FlashMessageSlice, { IFlashMessageSlice } from "@store/slices/FlashMessageSlice"
 
-
 interface IStore extends IBurgerMenuSlice, IToolbeltMenuSlice, IFlashMessageSlice { }
 
 const useStore = create<IStore>((set, get) => ({

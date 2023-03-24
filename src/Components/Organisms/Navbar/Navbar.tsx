@@ -46,7 +46,7 @@ export default function Navbar() {
               <div className="navbar__main-divider"></div>
 
               <a href="mailto:fentoncodes@gmail.com">
-                <Button variant="border" label="message" />
+                <Button variant="solid" label="message" />
               </a>
             </div>
             <BurgerMenu />
