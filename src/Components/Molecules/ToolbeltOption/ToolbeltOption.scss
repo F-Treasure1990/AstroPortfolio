@@ -10,6 +10,7 @@
   column-gap: 16px;
   min-height: 58px;
   transition: transform ease 0.3s, border ease 0.2s;
+  height: 60px;
   @include breakpoint-down(small) {
     flex: 1 1 190px;
   }

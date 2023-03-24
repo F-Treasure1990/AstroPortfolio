@@ -18,17 +18,15 @@ import Button from "@components/Atoms/Button/Button";
   </div>
   <div class="landing-text__paragraph">
     <Paragraphlayout>
-      I’m a self-taught developer specialising in building and designing for
-      exceptional web experiences. I am currently seeking opportunities that
-      will aid with further developement 👌🏽.
+      My focus as a self-taught developer is on building and designing
+      exceptional web experiences. I am currently seeking opportunities to
+      continue my growth and development 👌🏽.
     </Paragraphlayout>
   </div>
   <div class="landing-text__buttons">
-    <Button label="download CV" variant="solid" flashMessage client:load
-      >
-    </Button>
+    <Button label="download CV" variant="solid" flashMessage client:load />
     <a href="mailto:fentoncodes@gmail.com">
-      <Button variant="border" label="message"/>
+      <Button variant="border" label="message" />
     </a>
   </div>
 </section>
@@ -143,6 +141,7 @@ import Button from "@components/Atoms/Button/Button";
     &__buttons {
       display: flex;
       column-gap: 16px;
+
       @include breakpoint-down(small) {
         margin-top: 16px;
       }

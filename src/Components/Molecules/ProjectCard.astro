@@ -1,8 +1,6 @@
 ---
 import Button from "@components/Atoms/Button/Button";
 import ParagraphLayout from "@layouts/ParagraphLayout.astro";
-import Github from "@components/Atoms/Icons/github.astro";
-import Link from "@components/Atoms/Icons/link.astro";
 import StackOption from "@components/Atoms/StackOption.astro";
 import Tooltip from "@components/Atoms/Tooltip.astro";
 
@@ -48,12 +46,10 @@ const { title, date, type, project, image, description, github, link, stack } =
           github ? (
             <a href={github} target="_blank">
               <Button variant="border" label="github">
-                <Github />
               </Button>
             </a>
           ) : (
             <Button variant="border" label="github" flashMessage client:visible>
-              <Github />
             </Button>
           )
         }
@@ -61,9 +57,7 @@ const { title, date, type, project, image, description, github, link, stack } =
         {
           link && (
             <a href={link} target="_blank">
-              <Button variant="solid" label="link">
-                <Link />
-              </Button>
+              <Button variant="solid" label="visit" client:visible/>
             </a>
           )
         }
@@ -80,7 +74,7 @@ const { title, date, type, project, image, description, github, link, stack } =
     </div>
   </div>
   <div class="project__card-img">
-    <img src={`projectImgs/${image}.png`} alt={`${title}-Project`} />
+    <img src={`projectImgs/${image}.webp`} alt={`${title}-Project`} />
   </div>
 </div>
 

@@ -53,7 +53,7 @@ export default function ProjectsSubCard({ proj }: { proj: IProject }) {
         }
         {
           proj?.link && (
-              <Button variant="solid" label="link" flashMessage />
+              <Button variant="solid" label="visit" flashMessage />
           )
         }
       </div>

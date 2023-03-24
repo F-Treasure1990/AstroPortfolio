@@ -18,10 +18,10 @@
   font-weight: 500;
   line-height: 14px;
   z-index: 5;
-@include breakpoint-down(x-small){
-  font-size:12px;
-  padding: 8px 12px;
-}
+  @include breakpoint-down(x-small) {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
 }
 
 /* Button Variations  */
@@ -37,19 +37,19 @@
 
 .border {
   background-color: transparent;
-  border: 1px solid var(--c-highlight);
-  font-weight: 400;
+  border: 1px solid var(--c-accent);
+  font-weight: 300;
   cursor: pointer;
-  color: var(--c-accent);
+  color: var(--c-f-white);
   transition: border $global-transition;
-  background-color: var(--c-secondary);
   &:hover {
-    border-color: var(--c-accent);
+    background-color: var(--c-accent-d-10);
+    border-color: var(--c-accent-d-10);
   }
 }
 
 .code {
-  border:1px solid var(--c-green);
+  border: 1px solid var(--c-green);
   background-color: transparent;
   color: var(--c-green);
   font-size: 12px;
@@ -59,7 +59,7 @@
 }
 
 .design {
-  border:1px solid var(--c-purple);
+  border: 1px solid var(--c-purple);
   background-color: transparent;
   color: var(--c-purple);
   font-size: 12px;
