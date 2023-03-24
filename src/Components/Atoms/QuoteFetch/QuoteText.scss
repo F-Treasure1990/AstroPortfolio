@@ -17,7 +17,8 @@
   }
 
   &__quote {
-    font-family: Cabin;
+    font-family: $f-secondary;
+    font-weight:400;
     font-size: 16px;
     font-style: italic;
     color: var(--c-f-white);

@@ -41,7 +41,7 @@
       "confidence": 75
     },
     {
-      "name": "Apollo",
+      "name": "apollo",
       "link": "https://www.apollographql.com/",
       "confidence": 75
     }
@@ -105,7 +105,7 @@
       "confidence": 85
     },
     {
-      "name": "Figma",
+      "name": "figma",
       "link": "https://www.figma.com/",
       "confidence": 85
     },

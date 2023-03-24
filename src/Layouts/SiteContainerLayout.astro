@@ -1,5 +1,4 @@
 ---
-import "@styles/global.scss";
 import Navbar from "@components/Organisms/Navbar/Navbar";
 import Footer from "@components/Organisms/Footer.astro";
 
@@ -27,4 +26,11 @@ const { title = "Fenton Treasure | Portfolio" } = Astro.props as HeaderProps;
   </body>
 </html>
 
+<style is:global lang="scss">
+@use"@styles/abstracts" as * ;
+@use"@styles/base" as *;
 
+html,body {
+  font-family: "Poppins","Cabin";
+}
+</style>

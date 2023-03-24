@@ -103,14 +103,15 @@ const { index, title } = Astro.props as Props;
     <div class="section__header-title">{title}</div>
   </div>
   <div class="section__header-paragraph">
-    <slot  />
+    <slot />
     <!-- Line divider -->
-  <div class="section__header-line"/>
+    <div class="section__header-line"></div>
   </div>
-
 </div>
 
 <style lang="scss">
+  @use "@styles/abstracts" as *;
+
   .section__header {
     display: flex;
     flex-direction: column;
@@ -142,7 +143,7 @@ const { index, title } = Astro.props as Props;
     &-title {
       text-transform: capitalize;
       color: var(--c-f-white);
-      font-family: Cabin;
+      font-family: $f-secondary;
       font-size: 40px;
       line-height: 40px;
       font-weight: 600;
@@ -163,11 +164,11 @@ const { index, title } = Astro.props as Props;
     }
 
     &-line {
-        height: 1px;
-        background-color:var(--c-highlight);
-        width: 30%;
-        margin: 0 auto;
-        margin-bottom: 40px;
-      }
+      height: 1px;
+      background-color: var(--c-highlight);
+      width: 30%;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
   }
 </style>

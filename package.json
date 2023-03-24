@@ -11,14 +11,13 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^1.1.1",
-    "@astrojs/preact": "^2.1.0",
     "@astrojs/sitemap": "^1.2.1",
     "@types/react-dom": "^18.0.11",
     "astro": "^2.1.7",
     "astro-compress": "^1.1.35",
     "framer-motion": "^10.9.1",
     "popmotion": "^11.0.5",
-    "react": "^18.0.0",
+    "react": "18.2.0",
     "react-dom": "^18.0.0",
     "react-query": "^3.39.3",
     "react-spinners-kit": "^1.9.1",
@@ -28,7 +27,6 @@
     "@astrojs/react": "^2.1.0",
     "@types/react": "^18.0.29",
     "autoprefixer": "^10.4.14",
-    "cssnano": "^5.1.15",
     "sass": "^1.60.0",
     "typescript": "^5.0.2"
   }

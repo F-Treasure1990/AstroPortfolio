@@ -1,4 +1,4 @@
-import "./NavOption.scss"
+import "./NavOption.scss";
 import { motion } from "framer-motion";
 
 // Underline animation for Hover of a option
@@ -12,24 +12,25 @@ const underlineAnimation = {
 
 interface Props {
   section: string;
-  index: number
+  index: number;
 }
 
-export default function NavOption({ section, index }: Props) {
-
+const NavOption = ({ section, index }: Props) => {
   const scroll = (id: string) => {
     /* document.getElementById(id)?.scrollIntoView(); */
-    const section = document.getElementById(id)
+    const section = document.getElementById(id);
     const y = section.getBoundingClientRect().top + window.pageYOffset - 72;
-    window.scrollTo({top:y, behavior:'smooth'})
+    window.scrollTo({ top: y, behavior: "smooth" });
   };
 
   return (
-    <motion.div onClick={() => scroll(section)} className="navbar__option-container" whileHover="a" initial="i">
-      <div className="navbar__option"><span>0{index + 1}.</span>{section}</div>
-      <motion.div className="navbar__option-underline" variants={underlineAnimation} />
-    </motion.div>
-  )
-}
+   
+      <div className="navbar__option">
+        <span>0{index + 1}.</span>
+        {section}
+      </div>
+     
+  );
+};
 
-
+export default NavOption;

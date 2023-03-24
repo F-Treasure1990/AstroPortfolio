@@ -38,7 +38,7 @@ export default function ToolbeltOption({ cardOption, i }: Props) {
   return (
     <motion.a className="toolbelt__card" href={link} target="_blank" variants={v} animate="a" initial="i" custom={i} exit="e">
       <div className="toolbelt__card-img">
-        <img src={`stackIcons/${name}.svg`} alt={name} />
+        <img src={`stackIcons/${name}.svg`} alt={name} width={22}/>
       </div>
       <div className="toolbelt__card-info">
         <div className="toolbelt__card-title">

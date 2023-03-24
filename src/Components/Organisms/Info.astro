@@ -8,6 +8,6 @@ import SectionHeading from "@components/Molecules/SectionHeading.astro";
 <SectionHeading index={1} title="info" />
 <section class="info">
   <AboutMeIntro />
-  <ToolbeltMenu client:load />
+  <ToolbeltMenu client:visible/>
   <ToolbeltCardsLayout client:visible/>
 </section>

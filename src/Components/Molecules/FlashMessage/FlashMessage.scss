@@ -1,3 +1,4 @@
+  @use "@styles/abstracts" as *;
 .flash-message__wrapper {
   width: max-content;
   height: max-content;
@@ -46,7 +47,7 @@
     font-size: 24px;
     color: var(--c-f-white);
     font-weight: 600;
-    font-family: Cabin;
+    font-family: $f-secondary;
   }
   &__paragraph {
    font-size: 12px; 

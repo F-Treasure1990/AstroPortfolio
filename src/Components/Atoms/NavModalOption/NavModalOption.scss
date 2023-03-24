@@ -1,8 +1,9 @@
+  @use "@styles/abstracts" as *;
 .nav-modal__option {
   color: var(--c-f-off-white);
   font-size: 16px;
   font-weight: 300;
-  font-family: Cabin;
+  font-family: $f-secondary;
   padding: 16px 0;
   margin-bottom: 4px;
   border-bottom: 1px solid var(--c-highlight);

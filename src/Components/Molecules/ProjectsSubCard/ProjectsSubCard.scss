@@ -62,7 +62,8 @@
 
   &-title {
     color: var(--c-f-white);
-    font-family: Cabin;
+    font-family: $f-secondary;
+    font-weight:400;
     font-size: 18px;
     line-height: 24px;
     -webkit-line-clamp: 3;

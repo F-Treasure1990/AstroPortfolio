@@ -36,7 +36,7 @@
 }
 
 .border {
-  background-color: transparent;
+  background-color: var(--c-secondary);
   border: 1px solid var(--c-accent);
   font-weight: 300;
   cursor: pointer;
