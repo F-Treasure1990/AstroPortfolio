@@ -9,9 +9,9 @@ import useStore from "@store/useStore"
 import { AnimatePresence } from "framer-motion"
 import FlashMessage from "@components/Molecules/FlashMessage/FlashMessage"
 import useFlashMessage from "src/Hooks/useFlashMessage"
-export const navOptions = ["info", "projects", "experience", "resources", "testimonials"];
+const navOptions = ["info", "projects", "experience", "resources", "testimonials"];
 
-export default function Navbar() {
+const Navbar = () => {
   const burgerMenuToggled = useStore(state => state.burgerMenuToggled)
   const [flashMessage] = useFlashMessage()
 
@@ -60,3 +60,4 @@ export default function Navbar() {
   )
 }
 
+export default Navbar

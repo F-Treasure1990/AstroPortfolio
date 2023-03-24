@@ -6,20 +6,23 @@
   padding: 0;
 }
 
+
+html {
+  font-family: "Cabin";
+}
 body {
   font-family: "Poppins", "Cabin", sans-serif;
   background-color: var(--c-primary);
 }
 
 .body-overflow {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
 }
-
 
 br {
   display: block;
