@@ -16,6 +16,7 @@ interface Props {
 }
 
 const NavOption = ({ section, index }: Props) => {
+
   const scroll = (id: string) => {
     /* document.getElementById(id)?.scrollIntoView(); */
     const section = document.getElementById(id);
@@ -24,12 +25,23 @@ const NavOption = ({ section, index }: Props) => {
   };
 
   return (
-   
+    <>
+    <motion.div
+      onClick={() => scroll(section)}
+      className="navbar__option-container"
+      whileHover="a"
+      initial="i"
+    >
       <div className="navbar__option">
         <span>0{index + 1}.</span>
         {section}
       </div>
-     
+      <motion.div
+        className="navbar__option-underline"
+        variants={underlineAnimation}
+      />
+    </motion.div>
+    </>
   );
 };
 
