@@ -14,23 +14,26 @@ const { title = "Fenton Treasure | Portfolio" } = Astro.props as HeaderProps;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio for Fenton Treasure" />
+    <meta name="author" content="Fenton Treasure" />
     <title>{title}</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.svg">
-      </head>
+    <link rel="shortcut icon" type="image/png" href="favicon.svg" />
+  </head>
   <body>
-      <Navbar client:load/>
-      <section class="portfolio">
-        <slot />
-      </section>
-      <Footer />
+    <Navbar client:load />
+    <section class="portfolio">
+      <slot />
+    </section>
+    <Footer />
   </body>
 </html>
 
 <style is:global lang="scss">
-@use"@styles/abstracts" as * ;
-@use"@styles/base" as *;
+  @use "@styles/abstracts" as *;
+  @use "@styles/base" as *;
 
-html,body {
-  font-family: "Poppins","Cabin";
-}
+  html,
+  body {
+    font-family: "Poppins", "Cabin";
+  }
 </style>
