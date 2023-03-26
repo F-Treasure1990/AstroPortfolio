@@ -12,7 +12,7 @@ const underlineAnimation = {
 
 interface Props {
   section: string;
-  sectionIndex: string;
+  sectionIndex: number;
 }
 
 const NavOption = ({ section, sectionIndex }: Props) => {
@@ -32,7 +32,7 @@ const NavOption = ({ section, sectionIndex }: Props) => {
       initial="i"
     >
       <div className="navbar__option">
-        <span>0{sectionIndex}.</span>
+        <span>{`0${sectionIndex}.`}</span>
         {section}
       </div>
       <motion.div
