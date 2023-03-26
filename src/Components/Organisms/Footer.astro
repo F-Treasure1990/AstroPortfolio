@@ -1,5 +1,4 @@
 ---
-import FooterIcon from "@components/Atoms/Icons/FooterIcon.astro";
 import Linkd20 from "@components/Atoms/Icons/Linkd20";
 import Github20 from "@components/Atoms/Icons/Github20";
 import Insta20 from "@components/Atoms/Icons/Insta20";
@@ -7,16 +6,16 @@ import Insta20 from "@components/Atoms/Icons/Insta20";
 
 <div class="footer">
   <div class="footer__icon">
-    <FooterIcon />
+    <img class="footer__img" src="footerImg.webp"  alt="" loading="lazy" width={500}>
   </div>
   <div class="footer__info">
     <p>© 2022-present Fenton Treasure. All Rights Reserved.</p>
     <div class="footer__media">
-      <a href="https://www.instagram.com"/><Insta20 /></a>
-      <a href="https://github.com/F-Treasure1990">
+      <a href="https://www.instagram.com" target="_blank" aria-label="instagram"/><Insta20 /></a>
+      <a href="https://github.com/F-Treasure1990" target="_blank" aria-label="github">
         <Github20 />
       </a>
-      <a href="https://uk.linkedin.com/">
+      <a href="https://uk.linkedin.com/" target="_blank" aria-label="linkedIn">
         <Linkd20 />
       </a>
     </div>
@@ -33,10 +32,14 @@ import Insta20 from "@components/Atoms/Icons/Insta20";
     flex-direction: column;
     align-items: center;
 
+    &__img {
+      width: 100%;
+    }
+
     &__icon {
-      width: max-content;
       max-width: 280px;
-      width: 80%;
+      min-height:350px;
+      aspect-ratio:4/5;
       @include breakpoint-down(small) {
       max-width: 220px;
       }
@@ -56,6 +59,7 @@ import Insta20 from "@components/Atoms/Icons/Insta20";
       margin-top: 40px;
       column-gap: 24px;
       padding: 0 16px;
+      margin-bottom: 16px;
     }
     &__media {
       display: inherit;
