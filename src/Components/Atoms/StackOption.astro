@@ -3,7 +3,7 @@ const { logo } = Astro.props;
 ---
 
 <div class="stack-option">
-  <img class="stack-option__logo" src={`stackIcons/${logo}.svg`} alt={logo} />
+  <img class="stack-option__logo" src={`stackIcons/${logo}.svg`} alt={logo} loading="lazy" height={20} width="{20}"/>
 </div>
 
 <style lang="scss">
