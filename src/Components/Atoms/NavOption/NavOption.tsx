@@ -16,7 +16,6 @@ interface Props {
 }
 
 const NavOption = ({ section, index }: Props) => {
-
   const scroll = (id: string) => {
     /* document.getElementById(id)?.scrollIntoView(); */
     const section = document.getElementById(id);
@@ -33,7 +32,7 @@ const NavOption = ({ section, index }: Props) => {
       initial="i"
     >
       <div className="navbar__option">
-        <span>0{index + 1}.</span>
+        <span>0{index }.</span>
         {section}
       </div>
       <motion.div
