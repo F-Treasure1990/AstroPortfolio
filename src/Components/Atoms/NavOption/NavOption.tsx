@@ -32,7 +32,7 @@ const NavOption = ({ section, sectionIndex }: Props) => {
       initial="i"
     >
       <div className="navbar__option">
-        <span>0{sectionIndex}.</span>
+        <span>00.</span>
         {section}
       </div>
       <motion.div
