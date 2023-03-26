@@ -28,7 +28,7 @@ export default function TestimonialOption({ testIndex }: Props) {
         alt="person"
         loading="lazy"
       />
-      <h4 className="testimonial__name">{name}</h4>
+      <h2 className="testimonial__name">{name}</h2>
       <p className="testimonial__subtitle">{job}</p>
       <p className="testimonial__paragraph">{testimonial}</p>
     </section>

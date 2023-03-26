@@ -1,30 +1,30 @@
 [
   {
     "index":1,
-    "name": "bob sapp",
+    "name": "James Garden",
     "img": "bobsapp",
     "job": "software Developer",
     "testimonial": "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍"
   },
   {
     "index":2,
-    "name": "jim sapp",
+    "name": "Ryan Smith",
     "img": "jimsapp",
     "job": "software Developer",
     "testimonial": "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍"
   },
   {
     "index":3,
-    "name": "flin sapp",
+    "name": "Gareth Mowey",
     "img": "flinsapp",
-    "job": "software Developer",
+    "job": "cloud engineer",
     "testimonial": "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍"
   },
   {
     "index":4,
-    "name": "kid sapp",
+    "name": "Theo Wells",
     "img": "kidsapp",
-    "job": "software Developer",
+    "job": "React Developer",
     "testimonial": "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍"
   }
 ]

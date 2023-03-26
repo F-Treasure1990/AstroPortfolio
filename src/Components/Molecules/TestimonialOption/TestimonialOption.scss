@@ -11,7 +11,7 @@
     border-radius: 50%;
     background-color: var(--c-secondary);
     border: 2px solid var(--c-accent);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   &__name {
     font-size: 28px;
@@ -20,13 +20,12 @@
     font-weight: 400;
     font-family: $f-secondary;
     text-transform: capitalize;
-    line-height: 32px;
     margin-bottom: 8px;
+    line-height: 32px;
   }
   &__subtitle {
-    color: var(--c-f-off-white);
     line-height: 24px;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: capitalize;
     color: var(--c-accent);
     margin-bottom: 16px;
