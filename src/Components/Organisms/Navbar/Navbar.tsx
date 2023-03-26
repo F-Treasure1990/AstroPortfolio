@@ -35,8 +35,8 @@ const Navbar = () => {
           </div>
           <div className="navbar__main">
             <div className="navbar__main-options-container">
-              {navOptions.map((option) => (
-                <NavOption section={option} sectionIndex={navOptions.indexOf(option) + 1} key={option} />
+              {navOptions.map((option,index) => (
+                <NavOption section={option} sectionIndex={String(index + 1)} key={option} />
               ))}
             </div>
             <div className="navbar__main-divider"></div>
