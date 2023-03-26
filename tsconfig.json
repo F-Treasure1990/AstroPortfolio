@@ -8,7 +8,8 @@
       "@public/*": ["public/*"],
       "@data/*": ["src/data/*"], 
       "@store/*":["src/Store/*"],
-      "@hooks/*":["src/Hooks/*"]
+      "@hooks/*":["src/Hooks/*"],
+      "@images/*":["src/Images/*"]
     },
     "allowJs": true,
     "module": "ESNext",
