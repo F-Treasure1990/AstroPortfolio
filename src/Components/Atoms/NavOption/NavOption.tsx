@@ -12,9 +12,10 @@ const underlineAnimation = {
 
 interface Props {
   section: string;
+  sectionIndex: number;
 }
 
-const NavOption = ({ section }: Props) => {
+const NavOption = ({ section, sectionIndex }: Props) => {
   const scroll = (id: string) => {
     /* document.getElementById(id)?.scrollIntoView(); */
     const section = document.getElementById(id);
@@ -31,6 +32,7 @@ const NavOption = ({ section }: Props) => {
       initial="i"
     >
       <div className="navbar__option">
+        <span>0{sectionIndex}.</span>
         {section}
       </div>
       <motion.div
