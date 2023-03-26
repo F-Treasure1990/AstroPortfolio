@@ -26,6 +26,7 @@ export default function TestimonialOption({ testIndex }: Props) {
         draggable={false}
         src={`testimonialsImgs/${img}.png`}
         alt="person"
+        loading="lazy"
       />
       <h4 className="testimonial__name">{name}</h4>
       <p className="testimonial__subtitle">{job}</p>
