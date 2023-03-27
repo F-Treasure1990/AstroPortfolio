@@ -17,7 +17,6 @@ interface Props {
 
 const NavOption = ({ section, sectionIndex }: Props) => {
   const scroll = (id: string) => {
-    /* document.getElementById(id)?.scrollIntoView(); */
     const section = document.getElementById(id);
     const y = section.getBoundingClientRect().top + window.pageYOffset - 72;
     window.scrollTo({ top: y, behavior: "smooth" });
